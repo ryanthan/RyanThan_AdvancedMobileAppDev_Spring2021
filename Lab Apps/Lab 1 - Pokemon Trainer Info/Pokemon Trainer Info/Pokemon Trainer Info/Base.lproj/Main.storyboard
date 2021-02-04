@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZIG-aS-Sjz">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video-->
+        <scene sceneID="G8u-fP-88O">
+            <objects>
+                <viewController id="Frj-iy-u08" customClass="TrailerViewController" customModule="Pokemon_Trainer_Info" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QCm-4A-9su">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="3s9-w7-JT5">
+                                <rect key="frame" x="78" y="63.999999999999986" width="258.33333333333331" height="248.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History of Pokemon Games" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twB-1W-sGe">
+                                        <rect key="frame" x="0.0" y="0.0" width="258.33333333333331" height="26.333333333333332"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feeling nostalgic?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zov-y0-qHY">
+                                        <rect key="frame" x="43.666666666666671" y="106.33333333333334" width="170.66666666666663" height="26.333333333333343"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWh-Kh-5EO">
+                                        <rect key="frame" x="53.666666666666657" y="212.66666666666669" width="151" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Watch this video!">
+                                            <color key="titleColor" systemColor="linkColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goToYoutube:" destination="Frj-iy-u08" eventType="touchUpInside" id="fqd-X5-72c"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J2c-r2-cGj"/>
+                        <color key="backgroundColor" red="0.57924365670892186" green="0.90959840836019434" blue="0.974073024611399" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3s9-w7-JT5" firstAttribute="centerX" secondItem="QCm-4A-9su" secondAttribute="centerX" id="qv5-gD-uC5"/>
+                            <constraint firstItem="3s9-w7-JT5" firstAttribute="top" secondItem="J2c-r2-cGj" secondAttribute="top" constant="20" id="wb4-1Y-Pvt"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Video" image="play.rectangle.fill" catalog="system" id="eTz-QZ-uaa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GVb-KC-Bqp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="848"/>
+        </scene>
+        <!--Date-->
+        <scene sceneID="qaC-kZ-fgC">
+            <objects>
+                <viewController id="1b5-4A-glx" customClass="DateViewController" customModule="Pokemon_Trainer_Info" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uib-k4-Bjj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1MV-mH-iwl">
+                                <rect key="frame" x="23" y="54" width="368" height="342.33333333333331"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When did you first play Pokemon?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFs-Hx-Wb6">
+                                        <rect key="frame" x="23.333333333333343" y="0.0" width="321.33333333333326" height="26.333333333333332"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="5x8-UT-sKW">
+                                        <rect key="frame" x="24" y="34.333333333333314" width="320" height="216"/>
+                                        <connections>
+                                            <action selector="dateChanged:" destination="1b5-4A-glx" eventType="valueChanged" id="jsz-Hl-4Lr"/>
+                                        </connections>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYZ-NE-rf3">
+                                        <rect key="frame" x="0.0" y="258.33333333333331" width="368" height="84"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="368" id="op1-8w-T6N"/>
+                                            <constraint firstAttribute="height" constant="84" id="xph-g4-9vt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ebg-5K-EIm"/>
+                        <color key="backgroundColor" red="0.68745559634274112" green="0.974073024611399" blue="0.65599535388311481" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1MV-mH-iwl" firstAttribute="top" secondItem="ebg-5K-EIm" secondAttribute="top" constant="10" id="1cE-Kc-cTg"/>
+                            <constraint firstItem="1MV-mH-iwl" firstAttribute="centerX" secondItem="uib-k4-Bjj" secondAttribute="centerX" id="w3L-U2-mJO"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Date" image="calendar" catalog="system" id="33U-po-0td"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="wYZ-NE-rf3" id="LJt-YP-HMr"/>
+                        <outlet property="datePicker" destination="5x8-UT-sKW" id="Cze-Me-RZN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cgt-bb-pOH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050.7246376811595" y="847.76785714285711"/>
+        </scene>
+        <!--Game-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pokemon_Trainer_Info" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oYk-Xw-rGU">
+                                <rect key="frame" x="20" y="54" width="374" height="353.33333333333331"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your favorite Pokemon game?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uL-Jp-NqG">
+                                        <rect key="frame" x="8.6666666666666572" y="0.0" width="357" height="26.333333333333332"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMb-ll-9lW">
+                                        <rect key="frame" x="27" y="36" width="320" height="216"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="e19-Ug-4UW"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="4Gh-nv-fN5"/>
+                                        </connections>
+                                    </pickerView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iV5-hk-Y4h">
+                                        <rect key="frame" x="0.0" y="262.33333333333331" width="374" height="91"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="91" id="gQN-Rf-8EC"/>
+                                            <constraint firstAttribute="width" constant="374" id="hGx-8D-c1f"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="0.45003145208389539" blue="0.45531991773274172" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oYk-Xw-rGU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PRG-T2-1yz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="oYk-Xw-rGU" secondAttribute="bottom" constant="5" id="ygg-1p-dYf"/>
+                            <constraint firstItem="oYk-Xw-rGU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="yvW-Hf-aFq"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Game" image="gamecontroller.fill" catalog="system" id="iPt-1e-rMb"/>
+                    <connections>
+                        <outlet property="gameLabel" destination="iV5-hk-Y4h" id="NoL-PJ-61a"/>
+                        <outlet property="gamePicker" destination="bMb-ll-9lW" id="JvU-YP-4zH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050.7246376811595" y="115.84821428571428"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="2kl-Pu-kLa">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ZIG-aS-Sjz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RBT-bt-A0u">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="3jK-p5-uDb"/>
+                        <segue destination="1b5-4A-glx" kind="relationship" relationship="viewControllers" id="yT8-gu-X3K"/>
+                        <segue destination="Frj-iy-u08" kind="relationship" relationship="viewControllers" id="Hx1-F2-lpq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PqI-dc-04w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="gamecontroller.fill" catalog="system" width="128" height="80"/>
+        <image name="play.rectangle.fill" catalog="system" width="128" height="93"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

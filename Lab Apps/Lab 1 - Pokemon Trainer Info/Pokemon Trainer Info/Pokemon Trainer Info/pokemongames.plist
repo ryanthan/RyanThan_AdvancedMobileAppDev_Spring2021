@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>generation</key>
+		<string>Generation 1</string>
+		<key>games</key>
+		<array>
+			<string>Red &amp; Blue</string>
+			<string>Fire Red &amp; Leaf Green</string>
+		</array>
+	</dict>
+	<dict>
+		<key>generation</key>
+		<string>Generation 2</string>
+		<key>games</key>
+		<array>
+			<string>Gold &amp; Silver</string>
+			<string>Heart Gold &amp; Soul Silver</string>
+		</array>
+	</dict>
+	<dict>
+		<key>generation</key>
+		<string>Generation 3</string>
+		<key>games</key>
+		<array>
+			<string>Ruby &amp; Sapphire</string>
+			<string>Omega Ruby &amp; Alpha Sapphire</string>
+		</array>
+	</dict>
+	<dict>
+		<key>generation</key>
+		<string>Generation 4</string>
+		<key>games</key>
+		<array>
+			<string>Diamond &amp; Pearl</string>
+			<string>Platinum</string>
+		</array>
+	</dict>
+	<dict>
+		<key>generation</key>
+		<string>Generation 5</string>
+		<key>games</key>
+		<array>
+			<string>Black &amp; White</string>
+			<string>Black &amp; White 2</string>
+		</array>
+	</dict>
+	<dict>
+		<key>generation</key>
+		<string>Generation 6</string>
+		<key>games</key>
+		<array>
+			<string>X &amp; Y</string>
+			<string>Super Mystery Dungeon</string>
+		</array>
+	</dict>
+	<dict>
+		<key>generation</key>
+		<string>Generation 7</string>
+		<key>games</key>
+		<array>
+			<string>Sun &amp; Moon</string>
+			<string>Ultra Sun &amp; Moon</string>
+		</array>
+	</dict>
+	<dict>
+		<key>generation</key>
+		<string>Generation 8</string>
+		<key>games</key>
+		<array>
+			<string>Let&apos;s Go Pikachu &amp; Eevee</string>
+			<string>Sword &amp; Shield</string>
+		</array>
+	</dict>
+</array>
+</plist>
