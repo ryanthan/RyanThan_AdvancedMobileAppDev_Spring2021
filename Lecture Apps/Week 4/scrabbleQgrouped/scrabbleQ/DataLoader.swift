@@ -8,6 +8,7 @@
 import Foundation
 
 class DataLoader{
+    //Similar to the scrabbleQ app but using an array of GroupedWords instead
     var allData  = [GroupedWords]()
 
     func loadData(filename: String){
@@ -18,7 +19,7 @@ class DataLoader{
             do {
                 let data = try Data(contentsOf: pathURL)
                 //decodes the property list
-                allData = try plistdecoder.decode([GroupedWords].self, from: data)
+                allData = try plistdecoder.decode([GroupedWords].self, from: data) //allData includes the group letters and the words
             } catch {
                 //handle error
                 print("Cannot load data")
@@ -35,7 +36,7 @@ class DataLoader{
         for firstLetter in allData{
             letters.append(firstLetter.letter)
         }
-        // sorts the array
+        //Sorts the array of letters before returning
         letters.sort(by: {$0 < $1})
         return letters
     }

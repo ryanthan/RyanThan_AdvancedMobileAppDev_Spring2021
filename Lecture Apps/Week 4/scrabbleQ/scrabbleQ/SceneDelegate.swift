@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  scrabbleQ
 //
-//  Created by Aileen Pierce
+//  Created by Ryan Than on 2/8/21.
 //
 
 import UIKit

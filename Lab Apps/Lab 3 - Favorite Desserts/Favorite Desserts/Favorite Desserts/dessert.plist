@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>dessert</key>
+		<string>Cake</string>
+		<key>subtitle</key>
+		<string>Fluffy, moist, and sweet!</string>
+		<key>names</key>
+		<array>
+			<string>Red Velvet</string>
+			<string>Carrot</string>
+		</array>
+	</dict>
+	<dict>
+		<key>dessert</key>
+		<string>Cookie</string>
+		<key>subtitle</key>
+		<string>Tasty baked snacks!</string>
+		<key>names</key>
+		<array>
+			<string>Chocolate Chip</string>
+			<string>M&amp;M</string>
+		</array>
+	</dict>
+	<dict>
+		<key>dessert</key>
+		<string>Pastry</string>
+		<key>subtitle</key>
+		<string>Crisp and fluffy delights!</string>
+		<key>names</key>
+		<array>
+			<string>Croissant</string>
+			<string>Baklava</string>
+		</array>
+	</dict>
+	<dict>
+		<key>dessert</key>
+		<string>Ice Cream</string>
+		<key>subtitle</key>
+		<string>Cold, sweet, and satisfying treats!</string>
+		<key>names</key>
+		<array>
+			<string>Rocky Road</string>
+			<string>Cookie Dough</string>
+		</array>
+	</dict>
+	<dict>
+		<key>dessert</key>
+		<string>Pie</string>
+		<key>subtitle</key>
+		<string>Warm and delicious sweets!</string>
+		<key>names</key>
+		<array>
+			<string>Apple</string>
+			<string>Cherry</string>
+		</array>
+	</dict>
+	<dict>
+		<key>dessert</key>
+		<string>Candy</string>
+		<key>subtitle</key>
+		<string>Sweet treats for all ages!</string>
+		<key>names</key>
+		<array>
+			<string>Reese&apos;s</string>
+			<string>Hershey Kisses</string>
+		</array>
+	</dict>
+</array>
+</plist>

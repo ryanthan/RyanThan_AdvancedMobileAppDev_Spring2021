@@ -8,12 +8,13 @@
 import UIKit
 
 class SearchResultsController: UITableViewController, UISearchResultsUpdating {
+    //Variables
     var allwords = [GroupedWords]()
     var filteredWords = [String]()
-
+    
     func updateSearchResults(for searchController: UISearchController) {
         let searchString = searchController.searchBar.text //search string
-        filteredWords.removeAll(keepingCapacity: true) //removes all elements        if searchString?.isEmpty == false {
+        filteredWords.removeAll(keepingCapacity: true) //removes all elements
         if searchString?.isEmpty == false {
             //closure that will be called for each word to see if it matches the search string
             let filter: (String) -> Bool = { name in

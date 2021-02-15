@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct GroupedWords: Decodable {
+struct GroupedWords: Decodable { //Adopt the decodable protocol
+    //Make sure these variable names match the ones in the plist!
     let letter : String
     let words : [String]
 }
