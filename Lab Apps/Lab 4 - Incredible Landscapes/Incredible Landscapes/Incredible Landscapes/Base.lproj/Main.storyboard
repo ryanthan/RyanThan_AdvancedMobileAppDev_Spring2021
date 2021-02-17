@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DoN-mQ-Iei">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Images-->
+        <scene sceneID="Z2a-xe-y9G">
+            <objects>
+                <collectionViewController id="Fkq-QP-pSv" customClass="CollectionViewController" customModule="Incredible_Landscapes" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="tF1-My-mdP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mzR-fI-CoG">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="footerReferenceSize" width="50" height="50"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="RBd-Jc-K1V" customClass="CollectionViewCell" customModule="Incredible_Landscapes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="X8K-EL-VWd">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gc2-3m-skf">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="gc2-3m-skf" secondAttribute="trailing" id="1d3-VX-TiH"/>
+                                        <constraint firstAttribute="bottom" secondItem="gc2-3m-skf" secondAttribute="bottom" id="8Gd-FA-W4j"/>
+                                        <constraint firstItem="gc2-3m-skf" firstAttribute="top" secondItem="X8K-EL-VWd" secondAttribute="top" id="HcV-Bx-mrt"/>
+                                        <constraint firstItem="gc2-3m-skf" firstAttribute="leading" secondItem="X8K-EL-VWd" secondAttribute="leading" id="sFL-aq-iqf"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="100" height="100"/>
+                                <connections>
+                                    <outlet property="ImageView" destination="gc2-3m-skf" id="aV5-MS-FuV"/>
+                                    <segue destination="arZ-Y2-zeY" kind="show" identifier="showImageSegue" id="fUp-CX-bbR"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="headerIdentifier" id="ee5-IA-aJ8" customClass="SupplementaryView" customModule="Incredible_Landscapes" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2X-rT-lqE">
+                                    <rect key="frame" x="18" y="8" width="52" height="26.5"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="d2X-rT-lqE" firstAttribute="top" secondItem="ee5-IA-aJ8" secondAttribute="topMargin" id="AjP-9b-iAy"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="d2X-rT-lqE" secondAttribute="trailing" constant="20" symbolic="YES" id="Tf6-T0-uTO"/>
+                                <constraint firstItem="d2X-rT-lqE" firstAttribute="leading" secondItem="ee5-IA-aJ8" secondAttribute="leadingMargin" constant="10" id="Yh1-eO-ePs"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="headerLabel" destination="d2X-rT-lqE" id="EAx-zH-CNa"/>
+                            </connections>
+                        </collectionReusableView>
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="footerIdentifier" id="jwu-yF-aMr" customClass="SupplementaryView" customModule="Incredible_Landscapes" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="150" width="414" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hc3-Ej-VMv">
+                                    <rect key="frame" x="18" y="8" width="33" height="16"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="hc3-Ej-VMv" firstAttribute="top" secondItem="jwu-yF-aMr" secondAttribute="topMargin" id="bcY-Zy-R2i"/>
+                                <constraint firstItem="hc3-Ej-VMv" firstAttribute="leading" secondItem="jwu-yF-aMr" secondAttribute="leadingMargin" constant="10" id="d42-pi-oj3"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hc3-Ej-VMv" secondAttribute="trailing" constant="20" symbolic="YES" id="vOL-hO-biQ"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="footerLabel" destination="hc3-Ej-VMv" id="vpf-Ov-7e3"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="Fkq-QP-pSv" id="yIZ-cY-oKu"/>
+                            <outlet property="delegate" destination="Fkq-QP-pSv" id="lV8-pR-pag"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Images" id="syn-MM-VwW"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z7U-hs-ZBF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="818.84057971014499" y="33.482142857142854"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="YR9-qZ-QMr">
+            <objects>
+                <viewController id="arZ-Y2-zeY" customClass="DetailViewController" customModule="Incredible_Landscapes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VLT-C4-o5z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GhR-Us-yJW">
+                                <rect key="frame" x="0.0" y="88" width="414" height="638"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QN5-ij-jCP">
+                                <rect key="frame" x="0.0" y="734" width="414" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="Vmf-L9-owL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OiD-nE-2fW"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OiD-nE-2fW" firstAttribute="bottom" secondItem="QN5-ij-jCP" secondAttribute="bottom" constant="29" id="8q0-Ei-fDG"/>
+                            <constraint firstItem="QN5-ij-jCP" firstAttribute="top" secondItem="GhR-Us-yJW" secondAttribute="bottom" constant="8" id="A3y-vE-tOc"/>
+                            <constraint firstItem="GhR-Us-yJW" firstAttribute="centerX" secondItem="VLT-C4-o5z" secondAttribute="centerX" id="gSD-OS-xcf"/>
+                            <constraint firstItem="GhR-Us-yJW" firstAttribute="leading" secondItem="OiD-nE-2fW" secondAttribute="leading" id="giD-ED-xmg"/>
+                            <constraint firstItem="GhR-Us-yJW" firstAttribute="trailing" secondItem="QN5-ij-jCP" secondAttribute="trailing" id="mbP-ZG-ItI"/>
+                            <constraint firstItem="GhR-Us-yJW" firstAttribute="leading" secondItem="QN5-ij-jCP" secondAttribute="leading" id="oH5-0Y-SJq"/>
+                            <constraint firstItem="GhR-Us-yJW" firstAttribute="top" secondItem="OiD-nE-2fW" secondAttribute="top" id="xke-6o-V8v"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8D0-En-2Ob">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="c6c-RQ-syy">
+                            <connections>
+                                <action selector="Share:" destination="arZ-Y2-zeY" id="1zg-OI-imW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageLabel" destination="QN5-ij-jCP" id="zUZ-UA-BmE"/>
+                        <outlet property="imageView" destination="GhR-Us-yJW" id="6el-d7-hOK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pix-in-ng7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1618.840579710145" y="32.8125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dq1-ib-7B1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DoN-mQ-Iei" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aZP-bb-fge">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Fkq-QP-pSv" kind="relationship" relationship="rootViewController" id="51R-Tr-hdF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7P0-79-okP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-91.304347826086968" y="33.482142857142854"/>
+        </scene>
+    </scenes>
+</document>

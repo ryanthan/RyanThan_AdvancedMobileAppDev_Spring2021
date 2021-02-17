@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C353EE3225DB4B0200BFA485 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C353EE3125DB4B0200BFA485 /* AppDelegate.swift */; };
+		C353EE3425DB4B0200BFA485 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C353EE3325DB4B0200BFA485 /* SceneDelegate.swift */; };
+		C353EE3925DB4B0200BFA485 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C353EE3725DB4B0200BFA485 /* Main.storyboard */; };
+		C353EE3B25DB4B0300BFA485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C353EE3A25DB4B0300BFA485 /* Assets.xcassets */; };
+		C353EE3E25DB4B0300BFA485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C353EE3C25DB4B0300BFA485 /* LaunchScreen.storyboard */; };
+		C353EE4925DB4C5100BFA485 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C353EE4825DB4C5100BFA485 /* CollectionViewController.swift */; };
+		C353EE4C25DB4CD500BFA485 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C353EE4B25DB4CD500BFA485 /* CollectionViewCell.swift */; };
+		C353EE5025DB7CA600BFA485 /* SupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C353EE4F25DB7CA600BFA485 /* SupplementaryView.swift */; };
+		C353EE5325DB889900BFA485 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C353EE5225DB889900BFA485 /* DetailViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C353EE2E25DB4B0200BFA485 /* Incredible Landscapes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Incredible Landscapes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C353EE3125DB4B0200BFA485 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C353EE3325DB4B0200BFA485 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C353EE3825DB4B0200BFA485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C353EE3A25DB4B0300BFA485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C353EE3D25DB4B0300BFA485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C353EE3F25DB4B0300BFA485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C353EE4825DB4C5100BFA485 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		C353EE4B25DB4CD500BFA485 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		C353EE4F25DB7CA600BFA485 /* SupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplementaryView.swift; sourceTree = "<group>"; };
+		C353EE5225DB889900BFA485 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C353EE2B25DB4B0200BFA485 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C353EE2525DB4B0200BFA485 = {
+			isa = PBXGroup;
+			children = (
+				C353EE3025DB4B0200BFA485 /* Incredible Landscapes */,
+				C353EE2F25DB4B0200BFA485 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C353EE2F25DB4B0200BFA485 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C353EE2E25DB4B0200BFA485 /* Incredible Landscapes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C353EE3025DB4B0200BFA485 /* Incredible Landscapes */ = {
+			isa = PBXGroup;
+			children = (
+				C353EE3125DB4B0200BFA485 /* AppDelegate.swift */,
+				C353EE3325DB4B0200BFA485 /* SceneDelegate.swift */,
+				C353EE3725DB4B0200BFA485 /* Main.storyboard */,
+				C353EE5225DB889900BFA485 /* DetailViewController.swift */,
+				C353EE4F25DB7CA600BFA485 /* SupplementaryView.swift */,
+				C353EE4B25DB4CD500BFA485 /* CollectionViewCell.swift */,
+				C353EE4825DB4C5100BFA485 /* CollectionViewController.swift */,
+				C353EE3A25DB4B0300BFA485 /* Assets.xcassets */,
+				C353EE3C25DB4B0300BFA485 /* LaunchScreen.storyboard */,
+				C353EE3F25DB4B0300BFA485 /* Info.plist */,
+			);
+			path = "Incredible Landscapes";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C353EE2D25DB4B0200BFA485 /* Incredible Landscapes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C353EE4225DB4B0300BFA485 /* Build configuration list for PBXNativeTarget "Incredible Landscapes" */;
+			buildPhases = (
+				C353EE2A25DB4B0200BFA485 /* Sources */,
+				C353EE2B25DB4B0200BFA485 /* Frameworks */,
+				C353EE2C25DB4B0200BFA485 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Incredible Landscapes";
+			productName = "Incredible Landscapes";
+			productReference = C353EE2E25DB4B0200BFA485 /* Incredible Landscapes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C353EE2625DB4B0200BFA485 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					C353EE2D25DB4B0200BFA485 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = C353EE2925DB4B0200BFA485 /* Build configuration list for PBXProject "Incredible Landscapes" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C353EE2525DB4B0200BFA485;
+			productRefGroup = C353EE2F25DB4B0200BFA485 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C353EE2D25DB4B0200BFA485 /* Incredible Landscapes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C353EE2C25DB4B0200BFA485 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C353EE3E25DB4B0300BFA485 /* LaunchScreen.storyboard in Resources */,
+				C353EE3B25DB4B0300BFA485 /* Assets.xcassets in Resources */,
+				C353EE3925DB4B0200BFA485 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C353EE2A25DB4B0200BFA485 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C353EE4925DB4C5100BFA485 /* CollectionViewController.swift in Sources */,
+				C353EE3225DB4B0200BFA485 /* AppDelegate.swift in Sources */,
+				C353EE5025DB7CA600BFA485 /* SupplementaryView.swift in Sources */,
+				C353EE5325DB889900BFA485 /* DetailViewController.swift in Sources */,
+				C353EE4C25DB4CD500BFA485 /* CollectionViewCell.swift in Sources */,
+				C353EE3425DB4B0200BFA485 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C353EE3725DB4B0200BFA485 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C353EE3825DB4B0200BFA485 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C353EE3C25DB4B0300BFA485 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C353EE3D25DB4B0300BFA485 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C353EE4025DB4B0300BFA485 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C353EE4125DB4B0300BFA485 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C353EE4325DB4B0300BFA485 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GT749669HU;
+				INFOPLIST_FILE = "Incredible Landscapes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ATLAS.Incredible-Landscapes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C353EE4425DB4B0300BFA485 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GT749669HU;
+				INFOPLIST_FILE = "Incredible Landscapes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ATLAS.Incredible-Landscapes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C353EE2925DB4B0200BFA485 /* Build configuration list for PBXProject "Incredible Landscapes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C353EE4025DB4B0300BFA485 /* Debug */,
+				C353EE4125DB4B0300BFA485 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C353EE4225DB4B0300BFA485 /* Build configuration list for PBXNativeTarget "Incredible Landscapes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C353EE4325DB4B0300BFA485 /* Debug */,
+				C353EE4425DB4B0300BFA485 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C353EE2625DB4B0200BFA485 /* Project object */;
+}
