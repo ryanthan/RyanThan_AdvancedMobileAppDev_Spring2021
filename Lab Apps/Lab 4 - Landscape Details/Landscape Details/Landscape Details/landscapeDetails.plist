@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Antelope Canyon, Arizona</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Antelope_Canyon</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Bryce Canyon, Utah</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Bryce_Canyon_National_Park</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Cinque Terre, Italy</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Cinque_Terre</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Lake Lucerne, Switzerland</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Lake_Lucerne</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Moraine Lake, Canada</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Moraine_Lake</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Mù Cang Chải, Vietnam</string>
+		<key>url</key>
+		<string>https://bit.ly/3au6ent</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Na&apos;Pali Coast, Kauai, Hawaii</string>
+		<key>url</key>
+		<string>https://bit.ly/2NDXmSV</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Tulip Fields, Netherlands</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Keukenhof</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Paro Taktsang, Bhutan</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Paro_Taktsang</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Victoria Falls, Zambia and Zimbabwe</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Victoria_Falls</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Reynisfjara Beach, Iceland</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Reynisdrangar</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>The Namib Desert, Namibia</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Namib</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Salar de Uyuni, Bolivia</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Salar_de_Uyuni</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>White Desert, Egypt</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Salar_de_Uyuni</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Lavender Fields in Provence, France</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Provence</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Pamukkale, Turkey</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Pamukkale</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Table Mountain, South Africa</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Table_Mountain</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Oia, Greece</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Oia,_Greece</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>The Maroon Bells, Colorado</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Maroon_Bells</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Zhangjiajie National Forest, China</string>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Zhangjiajie_National_Forest_Park</string>
+	</dict>
+</array>
+</plist>
