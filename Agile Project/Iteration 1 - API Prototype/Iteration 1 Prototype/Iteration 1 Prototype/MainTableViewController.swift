@@ -104,6 +104,6 @@ class MainTableViewController: UITableViewController {
  - Search
  - Filters
  - Get platforms/genres for each game
- - Darken image
  - Load more
+ - (Optional) Darken image
  */
