@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>King Soopers</key>
+	<array>
+		<string>orange juice</string>
+		<string>cereal</string>
+		<string>salt</string>
+		<string>flour</string>
+	</array>
+	<key>Whole Foods</key>
+	<array>
+		<string>milk</string>
+		<string>yogurt</string>
+		<string>bananas</string>
+		<string>chicken</string>
+		<string>cheddar cheese</string>
+	</array>
+	<key>Costco</key>
+	<array>
+		<string>toilet paper</string>
+		<string>tissues</string>
+	</array>
+	<key>Target</key>
+	<array>
+		<string>birthday card</string>
+		<string>toothpaste</string>
+		<string>shampoo</string>
+		<string>batteries</string>
+		<string>tupperware</string>
+	</array>
+</dict>
+</plist>

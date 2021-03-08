@@ -1,0 +1,2 @@
+/Users/aileen/Documents/iOS projects/Grocery/Classes/GroceryAppDelegate.m:88: warning: property 'stores' requires method '-stores' to be defined - use @synthesize, @dynamic or provide a method implementation
+/Users/aileen/Documents/iOS projects/Grocery/Classes/GroceryAppDelegate.m:88: warning: property 'stores' requires the method 'setStores:' to be defined - use @synthesize, @dynamic or provide a method implementation

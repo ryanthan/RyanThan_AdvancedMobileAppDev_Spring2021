@@ -1,0 +1,331 @@
+TGrocery
+v7
+r0
+t341201854.367999
+cCheck dependencies
+cProcessInfoPlistFile "/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/Info.plist" Grocery-Info.plist
+cCompileXIB "/Users/aileen/Documents/iOS projects/Grocery/MainWindow.xib"
+cCompileXIB "/Users/aileen/Documents/iOS projects/Grocery/RootViewController.xib"
+cCopyPlistFile "/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/grocerystores.plist" grocerystores.plist
+cCompileXIB "/Users/aileen/Documents/iOS projects/Grocery/Classes/ItemsViewController.xib"
+cProcessPCH /var/folders/Nu/Nu7Z3c-3H7S4k6oVRlaPgk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Grocery_Prefix-cyzcnuspzzyzbvawbkuezconkwev/Grocery_Prefix.pch.gch Grocery_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Grocery.build/Debug-iphonesimulator/Grocery.build/Objects-normal/i386/main.o "/Users/aileen/Documents/iOS projects/Grocery/main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Grocery.build/Debug-iphonesimulator/Grocery.build/Objects-normal/i386/GroceryAppDelegate.o "/Users/aileen/Documents/iOS projects/Grocery/Classes/GroceryAppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Grocery.build/Debug-iphonesimulator/Grocery.build/Objects-normal/i386/RootViewController.o "/Users/aileen/Documents/iOS projects/Grocery/Classes/RootViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Grocery.build/Debug-iphonesimulator/Grocery.build/Objects-normal/i386/ItemsViewController.o "/Users/aileen/Documents/iOS projects/Grocery/Classes/ItemsViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd "/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/Grocery" normal i386
+cGenerateDSYMFile "/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app.dSYM" "/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/Grocery"
+cTouch "/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app"
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk
+c000000004D5C9B4E0000000000000110
+t1297914702
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004D54CFFA00000000002999B0
+t1297403898
+s2726320
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004D54CFE5000000000029DA70
+t1297403877
+s2742896
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004D54CFB80000000000001466
+t1297403832
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004D5615B40000000000000AA1
+t1297487284
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004D5616030000000000766870
+t1297487363
+s7759984
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/Availability.h
+c000000004D4F7A2B0000000000001B19
+t1297054251
+s6937
+
+N/Users/aileen/Documents/iOS projects/Grocery/Classes/GroceryAppDelegate.h
+c000000004EA5AD7400000000000001E5
+t1319480692
+s485
+i<UIKit/UIKit.h>
+
+N/Users/aileen/Documents/iOS projects/Grocery/Classes/GroceryAppDelegate.m
+c000000004EA5AD4B0000000000000A8C
+t1319480651
+s2700
+i"GroceryAppDelegate.h"
+i"RootViewController.h"
+
+N/Users/aileen/Documents/iOS projects/Grocery/Classes/ItemsViewController.h
+c000000004EA5AF8F0000000000000147
+t1319481231
+s327
+i<UIKit/UIKit.h>
+
+N/Users/aileen/Documents/iOS projects/Grocery/Classes/ItemsViewController.m
+c000000004EA5F0CC00000000000014F6
+t1319497932
+s5366
+i"ItemsViewController.h"
+i"RootViewController.h"
+
+N/Users/aileen/Documents/iOS projects/Grocery/Classes/ItemsViewController.xib
+c000000004EA5A7D200000000000042DC
+t1319479250
+s17116
+
+N/Users/aileen/Documents/iOS projects/Grocery/Classes/RootViewController.h
+c000000004EA5DF4D00000000000001E1
+t1319493453
+s481
+i<UIKit/UIKit.h>
+i"ItemsViewController.h"
+
+N/Users/aileen/Documents/iOS projects/Grocery/Classes/RootViewController.m
+c000000004EA61C4B00000000000014DD
+t1319509067
+s5341
+i"RootViewController.h"
+
+N/Users/aileen/Documents/iOS projects/Grocery/Grocery_Prefix.pch
+c000000004EA1A1010000000000000140
+t1319215361
+s320
+i<Availability.h>
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/aileen/Documents/iOS projects/Grocery/MainWindow.xib
+c000000004EA1A1010000000000005FF4
+t1319215361
+s24564
+
+N/Users/aileen/Documents/iOS projects/Grocery/RootViewController.xib
+c000000004EA5B0290000000000004C07
+t1319481385
+s19463
+
+N/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app
+t1319509054
+s306
+
+N/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app.dSYM
+t1319509054
+s102
+
+N/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/Grocery
+t1319509054
+s25364
+
+N/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/Info.plist
+t1319216842
+s591
+
+N/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/ItemsViewController.nib
+t1319479277
+s1547
+
+N/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/MainWindow.nib
+t1319216845
+s2456
+
+N/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/PkgInfo
+t1319216842
+s8
+
+N/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/RootViewController.nib
+t1319481388
+s1738
+
+N/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/grocerystores.plist
+t1319478383
+s282
+
+N/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Objects-normal/i386/Grocery.LinkFileList
+c000000004EA4DBF2000000000000022B
+t1319427058
+s555
+
+N/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Objects-normal/i386/GroceryAppDelegate.o
+t1319493454
+s53036
+
+N/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Objects-normal/i386/ItemsViewController.o
+t1319508277
+s45880
+
+N/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Objects-normal/i386/RootViewController.o
+t1319509054
+s47468
+
+N/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Objects-normal/i386/main.o
+t1319216847
+s6324
+
+N/Users/aileen/Documents/iOS projects/Grocery/grocerystores.plist
+c000000004EA5A46E0000000000000324
+t1319478382
+s804
+
+N/Users/aileen/Documents/iOS projects/Grocery/main.m
+c000000004EA1A101000000000000017B
+t1319215361
+s379
+i<UIKit/UIKit.h>
+
+N/var/folders/Nu/Nu7Z3c-3H7S4k6oVRlaPgk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Grocery_Prefix-cyzcnuspzzyzbvawbkuezconkwev/Grocery_Prefix.pch.gch
+t1319216847
+s15814064
+
+NGrocery-Info.plist
+c000000004EA1A101000000000000038D
+t1319215361
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies341201854#341201854#0(0"0(0#1#0"8623724896#0"0#
+
+CCompileC build/Grocery.build/Debug-iphonesimulator/Grocery.build/Objects-normal/i386/GroceryAppDelegate.o "/Users/aileen/Documents/iOS projects/Grocery/Classes/GroceryAppDelegate.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s341186254.386259
+e341186254.493864
+r1
+xCompileC
+xbuild/Grocery.build/Debug-iphonesimulator/Grocery.build/Objects-normal/i386/GroceryAppDelegate.o
+x/Users/aileen/Documents/iOS projects/Grocery/Classes/GroceryAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@81"Compile /Users/aileen/Documents/iOS projects/Grocery/Classes/GroceryAppDelegate.m341186254#341186254#0(0"0(0#0#73"/Users/aileen/Documents/iOS projects/Grocery/Classes/GroceryAppDelegate.m8596438176#2038"    cd "/Users/aileen/Documents/iOS projects/Grocery"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Grocery-generated-files.hmap" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Grocery-own-target-headers.hmap" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Grocery-all-target-headers.hmap" -iquote "/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Grocery-project-headers.hmap" "-F/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/include" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/DerivedSources/i386" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/DerivedSources" -include /var/folders/Nu/Nu7Z3c-3H7S4k6oVRlaPgk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Grocery_Prefix-cyzcnuspzzyzbvawbkuezconkwev/Grocery_Prefix.pch -c "/Users/aileen/Documents/iOS projects/Grocery/Classes/GroceryAppDelegate.m" -o "/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Objects-normal/i386/GroceryAppDelegate.o"0#
+
+CCompileC build/Grocery.build/Debug-iphonesimulator/Grocery.build/Objects-normal/i386/ItemsViewController.o "/Users/aileen/Documents/iOS projects/Grocery/Classes/ItemsViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s341201076.544543
+e341201077.562919
+r1
+xCompileC
+xbuild/Grocery.build/Debug-iphonesimulator/Grocery.build/Objects-normal/i386/ItemsViewController.o
+x/Users/aileen/Documents/iOS projects/Grocery/Classes/ItemsViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@82"Compile /Users/aileen/Documents/iOS projects/Grocery/Classes/ItemsViewController.m341201076#341201077#0(0"0(0#0#74"/Users/aileen/Documents/iOS projects/Grocery/Classes/ItemsViewController.m8624766944#2040"    cd "/Users/aileen/Documents/iOS projects/Grocery"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Grocery-generated-files.hmap" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Grocery-own-target-headers.hmap" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Grocery-all-target-headers.hmap" -iquote "/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Grocery-project-headers.hmap" "-F/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/include" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/DerivedSources/i386" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/DerivedSources" -include /var/folders/Nu/Nu7Z3c-3H7S4k6oVRlaPgk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Grocery_Prefix-cyzcnuspzzyzbvawbkuezconkwev/Grocery_Prefix.pch -c "/Users/aileen/Documents/iOS projects/Grocery/Classes/ItemsViewController.m" -o "/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Objects-normal/i386/ItemsViewController.o"0#
+
+CCompileC build/Grocery.build/Debug-iphonesimulator/Grocery.build/Objects-normal/i386/RootViewController.o "/Users/aileen/Documents/iOS projects/Grocery/Classes/RootViewController.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s341201854.232103
+e341201854.309843
+r1
+xCompileC
+xbuild/Grocery.build/Debug-iphonesimulator/Grocery.build/Objects-normal/i386/RootViewController.o
+x/Users/aileen/Documents/iOS projects/Grocery/Classes/RootViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@81"Compile /Users/aileen/Documents/iOS projects/Grocery/Classes/RootViewController.m341201854#341201854#0(0"0(0#0#73"/Users/aileen/Documents/iOS projects/Grocery/Classes/RootViewController.m8617684448#2038"    cd "/Users/aileen/Documents/iOS projects/Grocery"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Grocery-generated-files.hmap" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Grocery-own-target-headers.hmap" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Grocery-all-target-headers.hmap" -iquote "/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Grocery-project-headers.hmap" "-F/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/include" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/DerivedSources/i386" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/DerivedSources" -include /var/folders/Nu/Nu7Z3c-3H7S4k6oVRlaPgk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Grocery_Prefix-cyzcnuspzzyzbvawbkuezconkwev/Grocery_Prefix.pch -c "/Users/aileen/Documents/iOS projects/Grocery/Classes/RootViewController.m" -o "/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Objects-normal/i386/RootViewController.o"0#
+
+CCompileC build/Grocery.build/Debug-iphonesimulator/Grocery.build/Objects-normal/i386/main.o "/Users/aileen/Documents/iOS projects/Grocery/main.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s340909647.160074
+e340909647.310887
+r1
+xCompileC
+xbuild/Grocery.build/Debug-iphonesimulator/Grocery.build/Objects-normal/i386/main.o
+x/Users/aileen/Documents/iOS projects/Grocery/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@59"Compile /Users/aileen/Documents/iOS projects/Grocery/main.m340909647#340909647#0(0"0(0#0#51"/Users/aileen/Documents/iOS projects/Grocery/main.m8614781376#2002"    cd "/Users/aileen/Documents/iOS projects/Grocery"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Grocery-generated-files.hmap" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Grocery-own-target-headers.hmap" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Grocery-all-target-headers.hmap" -iquote "/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Grocery-project-headers.hmap" "-F/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/include" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/DerivedSources/i386" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/DerivedSources" -include /var/folders/Nu/Nu7Z3c-3H7S4k6oVRlaPgk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Grocery_Prefix-cyzcnuspzzyzbvawbkuezconkwev/Grocery_Prefix.pch -c "/Users/aileen/Documents/iOS projects/Grocery/main.m" -o "/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Objects-normal/i386/main.o"0#
+
+CCompileXIB "/Users/aileen/Documents/iOS projects/Grocery/Classes/ItemsViewController.xib"
+s341172074.417792
+e341172077.331678
+r1
+xCompileXIB
+x/Users/aileen/Documents/iOS projects/Grocery/Classes/ItemsViewController.xib
+lSLF07#2@42"CompileXIB Classes/ItemsViewController.xib341172074#341172077#0(0"0(0#0#76"/Users/aileen/Documents/iOS projects/Grocery/Classes/ItemsViewController.xib8627832448#620"    cd "/Users/aileen/Documents/iOS projects/Grocery"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/ItemsViewController.nib" "/Users/aileen/Documents/iOS projects/Grocery/Classes/ItemsViewController.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+
+CCompileXIB "/Users/aileen/Documents/iOS projects/Grocery/MainWindow.xib"
+s340909642.853397
+e340909645.027955
+r1
+xCompileXIB
+x/Users/aileen/Documents/iOS projects/Grocery/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib340909642#340909645#0(0"0(0#0#59"/Users/aileen/Documents/iOS projects/Grocery/MainWindow.xib8615625088#594"    cd "/Users/aileen/Documents/iOS projects/Grocery"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/MainWindow.nib" "/Users/aileen/Documents/iOS projects/Grocery/MainWindow.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+
+CCompileXIB "/Users/aileen/Documents/iOS projects/Grocery/RootViewController.xib"
+s341174188.530595
+e341174188.948172
+r1
+xCompileXIB
+x/Users/aileen/Documents/iOS projects/Grocery/RootViewController.xib
+lSLF07#2@33"CompileXIB RootViewController.xib341174188#341174188#0(0"0(0#0#67"/Users/aileen/Documents/iOS projects/Grocery/RootViewController.xib8607001440#610"    cd "/Users/aileen/Documents/iOS projects/Grocery"    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile "/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/RootViewController.nib" "/Users/aileen/Documents/iOS projects/Grocery/RootViewController.xib" --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+
+CCopyPlistFile "/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/grocerystores.plist" grocerystores.plist
+s341171182.664342
+e341171183.210083
+r1
+xCopyPlistFile
+x/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/grocerystores.plist
+xgrocerystores.plist
+lSLF07#2@24"Copy grocerystores.plist341171182#341171183#0(0"0(0#0#64"/Users/aileen/Documents/iOS projects/Grocery/grocerystores.plist8616047584#410"    cd "/Users/aileen/Documents/iOS projects/Grocery"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copyplist --convert binary1 grocerystores.plist --outdir "/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app"0#
+
+CGenerateDSYMFile "/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app.dSYM" "/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/Grocery"
+s341201854.333269
+e341201854.365014
+r1
+xGenerateDSYMFile
+x/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app.dSYM
+x/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/Grocery
+lSLF07#2@109"GenerateDSYMFile build/Debug-iphonesimulator/Grocery.app.dSYM build/Debug-iphonesimulator/Grocery.app/Grocery341201854#341201854#0(0"0(0#0#92"/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/Grocery8659235360#407"    cd "/Users/aileen/Documents/iOS projects/Grocery"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil "/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/Grocery" -o "/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app.dSYM"0#
+
+CLd "/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/Grocery" normal i386
+s341201854.309933
+e341201854.333173
+r1
+xLd
+x/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/Grocery
+xnormal
+xi386
+lSLF07#2@97"Link /Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/Grocery341201854#341201854#0(0"0(0#0#0"8660402144#940"    cd "/Users/aileen/Documents/iOS projects/Grocery"    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk "-L/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator" "-F/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator" -filelist "/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Objects-normal/i386/Grocery.LinkFileList" -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -o "/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/Grocery"0#
+
+CProcessInfoPlistFile "/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/Info.plist" Grocery-Info.plist
+s340909642.752304
+e340909642.853310
+r1
+xProcessInfoPlistFile
+x/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/Info.plist
+xGrocery-Info.plist
+lSLF07#2@26"Process Grocery-Info.plist340909642#340909642#0(0"0(0#0#63"/Users/aileen/Documents/iOS projects/Grocery/Grocery-Info.plist7811904093214569472#503"    cd "/Users/aileen/Documents/iOS projects/Grocery"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Grocery-Info.plist -genpkginfo "/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/PkgInfo" -expandbuildsettings -format binary -platform iphonesimulator -o "/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app/Info.plist"0#
+
+CProcessPCH /var/folders/Nu/Nu7Z3c-3H7S4k6oVRlaPgk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Grocery_Prefix-cyzcnuspzzyzbvawbkuezconkwev/Grocery_Prefix.pch.gch Grocery_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s340909645.587461
+e340909647.159923
+r1
+xProcessPCH
+x/var/folders/Nu/Nu7Z3c-3H7S4k6oVRlaPgk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Grocery_Prefix-cyzcnuspzzyzbvawbkuezconkwev/Grocery_Prefix.pch.gch
+xGrocery_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@29"Precompile Grocery_Prefix.pch340909645#340909647#0(0"0(0#0#63"/Users/aileen/Documents/iOS projects/Grocery/Grocery_Prefix.pch8615202720#1886"    cd "/Users/aileen/Documents/iOS projects/Grocery"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote "/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Grocery-generated-files.hmap" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Grocery-own-target-headers.hmap" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Grocery-all-target-headers.hmap" -iquote "/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/Grocery-project-headers.hmap" "-F/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/include" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/DerivedSources/i386" "-I/Users/aileen/Documents/iOS projects/Grocery/build/Grocery.build/Debug-iphonesimulator/Grocery.build/DerivedSources" -c "/Users/aileen/Documents/iOS projects/Grocery/Grocery_Prefix.pch" -o /var/folders/Nu/Nu7Z3c-3H7S4k6oVRlaPgk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Grocery_Prefix-cyzcnuspzzyzbvawbkuezconkwev/Grocery_Prefix.pch.gch0#
+
+CTouch "/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app"
+s341201854.365090
+e341201854.367971
+r1
+xTouch
+x/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app
+lSLF07#2@90"Touch /Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app341201854#341201854#0(0"0(0#0#0"8630156928#294"    cd "/Users/aileen/Documents/iOS projects/Grocery"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c "/Users/aileen/Documents/iOS projects/Grocery/build/Debug-iphonesimulator/Grocery.app"0#
+
