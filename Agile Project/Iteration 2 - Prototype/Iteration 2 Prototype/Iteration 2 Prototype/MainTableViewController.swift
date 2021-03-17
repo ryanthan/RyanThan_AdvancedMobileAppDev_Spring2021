@@ -16,6 +16,7 @@ class MainTableViewController: UITableViewController {
     var genreList = [String]()
     var platformList = [String]()
     var pageNumber = 2
+    var searchActive = false
     
     //Activity indicator
     let loadingView = UIView()
@@ -38,6 +39,40 @@ class MainTableViewController: UITableViewController {
         gameDataHandler.onDataUpdate = {[weak self] (data:[Game]) in self?.render()}
         gameDataHandler.loadListJSON("https://rawg-video-games-database.p.rapidapi.com/games")
     }
+    
+    @IBAction func SearchButton(_ sender: UIBarButtonItem) {
+        let addalert = UIAlertController(title: "Search", message: "Please enter a search term. Leave blank to return to the full list.", preferredStyle: .alert)
+        addalert.addTextField(configurationHandler: {(UITextField) in}) //Add textfield to the alert
+        
+        //Create cancel button
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        addalert.addAction(cancelAction)
+        
+        //Create add button
+        let addItemAction = UIAlertAction(title: "Search", style: .default, handler: {(UIAlertAction) in
+            let searchTextField = addalert.textFields![0] //Gets textfield
+            let searchString = searchTextField.text! //Gets text in the textfield
+            
+            if searchString.isEmpty == false {
+                self.setLoadingScreen() //Sets a loading screen while the API data loads
+                self.gameDataHandler.clearGames()
+                self.gameDataHandler.onDataUpdate = {[weak self] (data:[Game]) in self?.render()}
+                let newString = searchString.replacingOccurrences(of: " ", with: "%20", options: .literal, range: nil)
+                self.gameDataHandler.loadListJSON("https://rawg-video-games-database.p.rapidapi.com/games?search=\(newString)")
+                self.searchActive = true
+            } else {
+                self.setLoadingScreen() //Sets a loading screen while the API data loads
+                self.gameDataHandler.clearGames()
+                self.gameDataHandler.onDataUpdate = {[weak self] (data:[Game]) in self?.render()}
+                self.gameDataHandler.loadListJSON("https://rawg-video-games-database.p.rapidapi.com/games")
+                self.pageNumber = 2
+                self.searchActive = false
+            }
+        })
+        addalert.addAction(addItemAction)
+        
+        present(addalert, animated: true, completion: nil) //Present the alert to user
+    }
 
     // MARK: - Table View
     
@@ -52,7 +87,7 @@ class MainTableViewController: UITableViewController {
         let game = games[indexPath.row]
         
         //Get the game image from the URL
-        loadImage(fromURL: game.background_image!, toImageView: cell.gameImageView)
+        loadImage(fromURL: game.background_image ?? "https://www.thermaxglobal.com/wp-content/uploads/2020/05/image-not-found.jpg", toImageView: cell.gameImageView)
         
         //Set the game name
         cell.titleLabel?.text = game.name
@@ -117,7 +152,7 @@ class MainTableViewController: UITableViewController {
     //Function to load more data when the user reaches the end of the current set
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let lastElement = games.count - 1
-        if indexPath.row == lastElement {
+        if indexPath.row == lastElement && searchActive == false {
             activityIndicator.isHidden = false //Show the activity indicator
             activityIndicator.startAnimating() //Start animating the activity indicator
             gameDataHandler.loadListJSON("https://api.rawg.io/api/games?page=\(pageNumber)") //Load the next page of data
@@ -129,10 +164,36 @@ class MainTableViewController: UITableViewController {
     //Function to get the list of games and reload the table view to populate the cells
     func render() {
         games = gameDataHandler.getGames() //Get the games
-        self.removeLoadingScreen() //Remove the loading screen after the data has been loaded
-        tableView.reloadData() //Reload the table
+        removeLoadingScreen() //Remove the loading screen after the data has been loaded
+        
+        if self.gameDataHandler.JSONError() == true {
+            searchError()
+        } else if self.gameDataHandler.JSONError() == false && searchActive == true{
+            let topIndex = IndexPath(row: 0, section: 0)
+            tableView.scrollToRow(at: topIndex, at: .top, animated: true)
+            tableView.reloadData() //Reload the table
+        } else {
+            tableView.reloadData() //Reload the table
+        }
     }
-    
+
+    func searchError() {
+        let errorAlert = UIAlertController(title: "Error", message: "Cannot find games with the provided search term.", preferredStyle: .alert)
+        
+        //Create add button
+        let okayAction = UIAlertAction(title: "Okay", style: .default, handler: {(UIAlertAction) in
+            self.setLoadingScreen() //Sets a loading screen while the API data loads
+            self.gameDataHandler.clearGames()
+            self.gameDataHandler.onDataUpdate = {[weak self] (data:[Game]) in self?.render()}
+            self.gameDataHandler.loadListJSON("https://rawg-video-games-database.p.rapidapi.com/games")
+            self.pageNumber = 2
+            self.searchActive = false
+        })
+        errorAlert.addAction(okayAction)
+        
+        present(errorAlert, animated: true, completion: nil) //Present the alert to user
+    }
+
     //Loading Screen from: https://stackoverflow.com/questions/29311093/place-activity-indicator-over-uitable-view
     private func setLoadingScreen() {
         //Set up the view that contains the loading text and activity indicator
@@ -147,6 +208,7 @@ class MainTableViewController: UITableViewController {
         loadingLabel.textAlignment = .center
         loadingLabel.text = "Loading..."
         loadingLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 30)
+        loadingLabel.isHidden = false
 
         //Configure the activity indicator
         spinner.style = .medium

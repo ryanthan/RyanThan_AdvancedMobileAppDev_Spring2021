@@ -26,9 +26,11 @@ struct Game : Decodable {
     let name : String?
     let released : String?
     let background_image : String?
+    let background_image_additional : String?
     let metacritic : Int?
     let playtime : Int?
     let description : String?
+    let metacritic_url : String?
     var esrb_rating : esrbRatingData?
     var platforms : [PlatformData]
     var genres : [GenreData]
@@ -39,9 +41,11 @@ struct Game : Decodable {
         name = ""
         released = ""
         background_image = ""
+        background_image_additional = ""
         metacritic = 0
         playtime = 0
         description = ""
+        metacritic_url = ""
         esrb_rating = nil
         platforms = [PlatformData]()
         genres = [GenreData]()

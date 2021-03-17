@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A55694262600211000020CF2 /* SearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55694252600211000020CF2 /* SearchResultsController.swift */; };
 		C34F532E25E30A8300E9D991 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F532D25E30A8300E9D991 /* AppDelegate.swift */; };
 		C34F533025E30A8300E9D991 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F532F25E30A8300E9D991 /* SceneDelegate.swift */; };
 		C34F533525E30A8300E9D991 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34F533325E30A8300E9D991 /* Main.storyboard */; };
@@ -21,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A55694252600211000020CF2 /* SearchResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsController.swift; sourceTree = "<group>"; };
 		C34F532A25E30A8300E9D991 /* Iteration 2 Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Iteration 2 Prototype.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34F532D25E30A8300E9D991 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C34F532F25E30A8300E9D991 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +69,6 @@
 				C34F533325E30A8300E9D991 /* Main.storyboard */,
 				C34F534F25E446FC00E9D991 /* GameDataHandler.swift */,
 				C34F534925E4360C00E9D991 /* DetailViewController.swift */,
-				A55694252600211000020CF2 /* SearchResultsController.swift */,
 				C34F534625E35A6600E9D991 /* GameData.swift */,
 				C34F534325E3556C00E9D991 /* MainTableViewController.swift */,
 				C34F534C25E4392200E9D991 /* TableViewCellController.swift */,
@@ -156,7 +153,6 @@
 				C34F534D25E4392200E9D991 /* TableViewCellController.swift in Sources */,
 				C34F534725E35A6600E9D991 /* GameData.swift in Sources */,
 				C34F535025E446FC00E9D991 /* GameDataHandler.swift in Sources */,
-				A55694262600211000020CF2 /* SearchResultsController.swift in Sources */,
 				C34F534A25E4360C00E9D991 /* DetailViewController.swift in Sources */,
 				C34F534425E3556C00E9D991 /* MainTableViewController.swift in Sources */,
 				C34F533025E30A8300E9D991 /* SceneDelegate.swift in Sources */,

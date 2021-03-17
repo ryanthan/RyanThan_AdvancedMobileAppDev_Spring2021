@@ -16,6 +16,10 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var metacriticLabel: UILabel!
     @IBOutlet weak var playtimeLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var favoritesButton: UIButton!
+    @IBOutlet weak var metacriticButton: UIButton!
+    @IBOutlet weak var youtubeButton: UIButton!
     
     //Variables
     var gameDataHandler = GameDataHandler()
@@ -57,53 +61,64 @@ class DetailViewController: UIViewController {
         }
         
         //Get the game image from the URL
-        loadImage(fromURL: selectedGameDetails.background_image!, toImageView: backgroundImage)
+        loadImage(fromURL: selectedGameDetails.background_image ?? "https://www.thermaxglobal.com/wp-content/uploads/2020/05/image-not-found.jpg", toImageView: backgroundImage)
         
         //Learned how to remove html tags from a string here: https://stackoverflow.com/questions/25983558/stripping-out-html-tags-from-a-string
-        let cleanedDescription = selectedGameDetails.description!.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
-        
+        let cleanedDescription1 = selectedGameDetails.description!.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+        let cleanedDescription2 = cleanedDescription1.replacingOccurrences(of: "&#39;", with: "'", range: nil)
+        let cleanedDescription3 = cleanedDescription2.replacingOccurrences(of: "&quot;", with: "\"", range: nil)
         
         //Fill in the page details
-        descriptionLabel?.text = cleanedDescription //Set the game description
+        descriptionLabel?.text = cleanedDescription3 //Set the game description
         platformLabel?.text = platformList.joined(separator: ", ")
         genreLabel?.text = genreList.joined(separator: ", ")
         
         metacriticLabel?.text = "Metacritic Score: \(selectedGameDetails.metacritic ?? 0)"
         playtimeLabel?.text = "Average Playtime: \(selectedGameDetails.playtime ?? 0) hours"
-    }
-}
-
-//Function to quickly grab images from the URL
-//Help from: https://stackoverflow.com/questions/44519925/swift-3-url-image-makes-uitableview-scroll-slow-issue
-func loadImage(fromURL urlString: String, toImageView imageView: UIImageView) {
-    //If the URL is null, return
-    guard let url = URL(string: urlString) else {
-        return
-    }
-
-    //Add an activity indicator to the center of each imageView
-    let activityView = UIActivityIndicatorView(style: .large)
-    imageView.addSubview(activityView)
-    activityView.frame = imageView.bounds
-    activityView.translatesAutoresizingMaskIntoConstraints = false
-    activityView.centerXAnchor.constraint(equalTo: imageView.centerXAnchor).isActive = true
-    activityView.centerYAnchor.constraint(equalTo: imageView.centerYAnchor).isActive = true
-    activityView.startAnimating()
-
-    //Get the image from the URL
-    URLSession.shared.dataTask(with: url) { (data, response, error) in
-        //Stop the activity indicator and remove it
-        DispatchQueue.main.async {
-            activityView.stopAnimating()
-            activityView.removeFromSuperview()
-        }
         
-        //Update the image view if the data was successfully downloaded
-        if let data = data {
-            let image = UIImage(data: data)
-            DispatchQueue.main.async {
-                imageView.image = image
-            }
+        if selectedGameDetails.metacritic_url == "" {
+            metacriticButton.isHidden = true
+        } else {
+            metacriticButton.isHidden = false
         }
-    }.resume()
+    }
+    
+    @IBAction func openMetacriticSite(_ sender: Any) {
+        UIApplication.shared.open(NSURL(string: selectedGameDetails.metacritic_url!)! as URL)
+    }
+    
+    //Function to quickly grab images from the URL
+    //Help from: https://stackoverflow.com/questions/44519925/swift-3-url-image-makes-uitableview-scroll-slow-issue
+    func loadImage(fromURL urlString: String, toImageView imageView: UIImageView) {
+        //If the URL is null, return
+        guard let url = URL(string: urlString) else {
+            return
+        }
+
+        //Add an activity indicator to the center of each imageView
+        let activityView = UIActivityIndicatorView(style: .large)
+        imageView.addSubview(activityView)
+        activityView.frame = imageView.bounds
+        activityView.translatesAutoresizingMaskIntoConstraints = false
+        activityView.centerXAnchor.constraint(equalTo: imageView.centerXAnchor).isActive = true
+        activityView.centerYAnchor.constraint(equalTo: imageView.centerYAnchor).isActive = true
+        activityView.startAnimating()
+
+        //Get the image from the URL
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            //Stop the activity indicator and remove it
+            DispatchQueue.main.async {
+                activityView.stopAnimating()
+                activityView.removeFromSuperview()
+            }
+            
+            //Update the image view if the data was successfully downloaded
+            if let data = data {
+                let image = UIImage(data: data)
+                DispatchQueue.main.async {
+                    imageView.image = image
+                }
+            }
+        }.resume()
+    }
 }
