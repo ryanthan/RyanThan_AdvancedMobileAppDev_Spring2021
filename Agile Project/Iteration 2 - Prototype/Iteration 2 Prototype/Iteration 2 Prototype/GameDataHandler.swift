@@ -110,7 +110,7 @@ class GameDataHandler {
         do {
             let apiData = try JSONDecoder().decode(Game.self, from: data)
             game = apiData
-            print(game) //Uncomment to see all of the game details
+            //print(game) //Uncomment to see all of the game details
         }
         catch let jsonError {
             errorBool = true

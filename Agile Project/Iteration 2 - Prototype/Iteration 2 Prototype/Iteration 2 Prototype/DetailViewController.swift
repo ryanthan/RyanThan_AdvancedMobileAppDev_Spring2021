@@ -27,6 +27,11 @@ class DetailViewController: UIViewController {
     var selectedGameDetails = Game()
     var genreList = [String]()
     var platformList = [String]()
+    var titleLabel : UILabel?
+    var favoritesData = FavoritesDataHandler()
+    let dataFile = "favoritesList.plist"
+    var favoritesList = [Favorite]()
+    var favoriteGameDetails = Favorite()
     
     //Function that runs when the view first loads
     override func viewDidLoad() {
@@ -37,10 +42,41 @@ class DetailViewController: UIViewController {
         gameDataHandler.loadSingleJSON("https://rawg-video-games-database.p.rapidapi.com/games/\(selectedGameSlug)") //Load json with the specific game request
     }
     
+    //Save data when the UIApplicationWillResignActiveNotification notification is posted
+    @objc func applicationWillResignActive(_ notification: Notification){
+        favoritesData.saveData(fileName: dataFile)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        favoritesData.saveData(fileName: dataFile)
+    }
+    
+    @IBAction func addToFavorites(_ sender: UIButton) {
+        favoritesData.addItem(newItem: favoriteGameDetails)
+        favoritesButton.setTitle("In favorites", for: .normal)
+        favoritesButton.isEnabled = false
+        favoritesData.saveData(fileName: dataFile)
+    }
+    
     //Function that gets called when the detail view appears
     override func viewWillAppear(_ animated: Bool) {
         //Setup and formatting:
         selectedGameDetails = gameDataHandler.getGameDetails() //Get the game details
+        
+        favoritesData.loadData(fileName: dataFile)
+        favoritesList = favoritesData.getItems()
+        //print(favoritesList)
+        
+        favoriteGameDetails.slug = selectedGameDetails.slug
+        favoriteGameDetails.name = selectedGameDetails.name
+        favoriteGameDetails.background_image = selectedGameDetails.background_image
+        favoriteGameDetails.released = selectedGameDetails.released
+        
+        //application instance
+        let app = UIApplication.shared
+        //subscribe to the UIApplicationWillResignActiveNotification notification
+        NotificationCenter.default.addObserver(self, selector: #selector(self.applicationWillResignActive(_:)), name: UIApplication.willResignActiveNotification, object: app)
+        
         for genre in selectedGameDetails.genres {
             genreList.append(genre.name!) //Add all of the game's genres to the list
         }
@@ -81,6 +117,23 @@ class DetailViewController: UIViewController {
         } else {
             metacriticButton.isHidden = false
         }
+        
+        for game in favoritesList {
+            if favoriteGameDetails.slug == game.slug {
+                favoritesButton.setTitle("In favorites", for: .normal)
+                favoritesButton.isEnabled = false
+            }
+        }
+        
+        //Add a unique title label to account for long game names
+        titleLabel = UILabel(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.width, height: 44.0))
+        titleLabel!.backgroundColor = UIColor.clear
+        titleLabel!.numberOfLines = 0
+        titleLabel!.textAlignment = NSTextAlignment.center
+        titleLabel!.font = UIFont.boldSystemFont(ofSize: 17)
+        titleLabel!.textColor = UIColor.white
+        titleLabel!.text = selectedGameDetails.name
+        self.navigationItem.titleView = titleLabel
     }
     
     @IBAction func openMetacriticSite(_ sender: Any) {

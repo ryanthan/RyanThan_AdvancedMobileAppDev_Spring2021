@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A556942F26029FEA00020CF2 /* FavoritesDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A556942E26029FEA00020CF2 /* FavoritesDataHandler.swift */; };
+		A55694322602E00E00020CF2 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55694312602E00E00020CF2 /* FavoritesViewController.swift */; };
 		C34F532E25E30A8300E9D991 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F532D25E30A8300E9D991 /* AppDelegate.swift */; };
 		C34F533025E30A8300E9D991 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F532F25E30A8300E9D991 /* SceneDelegate.swift */; };
 		C34F533525E30A8300E9D991 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34F533325E30A8300E9D991 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A556942E26029FEA00020CF2 /* FavoritesDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesDataHandler.swift; sourceTree = "<group>"; };
+		A55694312602E00E00020CF2 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		C34F532A25E30A8300E9D991 /* Iteration 2 Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Iteration 2 Prototype.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34F532D25E30A8300E9D991 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C34F532F25E30A8300E9D991 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,11 +71,13 @@
 				C34F532D25E30A8300E9D991 /* AppDelegate.swift */,
 				C34F532F25E30A8300E9D991 /* SceneDelegate.swift */,
 				C34F533325E30A8300E9D991 /* Main.storyboard */,
+				A55694312602E00E00020CF2 /* FavoritesViewController.swift */,
+				A556942E26029FEA00020CF2 /* FavoritesDataHandler.swift */,
 				C34F534F25E446FC00E9D991 /* GameDataHandler.swift */,
-				C34F534925E4360C00E9D991 /* DetailViewController.swift */,
-				C34F534625E35A6600E9D991 /* GameData.swift */,
 				C34F534325E3556C00E9D991 /* MainTableViewController.swift */,
+				C34F534925E4360C00E9D991 /* DetailViewController.swift */,
 				C34F534C25E4392200E9D991 /* TableViewCellController.swift */,
+				C34F534625E35A6600E9D991 /* GameData.swift */,
 				C34F533625E30A8300E9D991 /* Assets.xcassets */,
 				C34F533825E30A8300E9D991 /* LaunchScreen.storyboard */,
 				C34F533B25E30A8300E9D991 /* Info.plist */,
@@ -149,6 +155,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A556942F26029FEA00020CF2 /* FavoritesDataHandler.swift in Sources */,
+				A55694322602E00E00020CF2 /* FavoritesViewController.swift in Sources */,
 				C34F532E25E30A8300E9D991 /* AppDelegate.swift in Sources */,
 				C34F534D25E4392200E9D991 /* TableViewCellController.swift in Sources */,
 				C34F534725E35A6600E9D991 /* GameData.swift in Sources */,

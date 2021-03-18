@@ -83,3 +83,18 @@ struct GenreData : Decodable {
         name = ""
     }
 }
+
+
+struct Favorite : Codable {
+    var slug : String?
+    var name : String?
+    var released : String?
+    var background_image : String?
+    
+    init() {
+        slug = ""
+        name = ""
+        released = ""
+        background_image = ""
+    }
+}

@@ -92,12 +92,25 @@ class MainTableViewController: UITableViewController {
         //Set the game name
         cell.titleLabel?.text = game.name
         
-        //Genres
-        for platform in game.platforms {
-            platformList.append((platform.platform?.name)!) //Add all of the game's platforma to the list
+        //Platforms
+//        for platform in game.platforms {
+//            platformList.append((platform.platform?.name)!) //Add all of the game's platforma to the list
+//        }
+//        cell.platformLabel?.text = platformList.joined(separator: ", ")
+//        platformList.removeAll() //Remove all the current platforms for the next game
+        
+        //Format the release date
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd"
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "MMM dd, yyyy"
+        
+        if let date = dateFormatterGet.date(from: game.released ?? "0000-00-00") {
+            cell.platformLabel?.text = dateFormatterPrint.string(from: date)
+        } else {
+            cell.platformLabel?.text = "-"
+            print("Date string error")
         }
-        cell.platformLabel?.text = platformList.joined(separator: ", ")
-        platformList.removeAll() //Remove all the current platforms for the next game
         
         //Genres
         for genre in game.genres {
@@ -144,6 +157,15 @@ class MainTableViewController: UITableViewController {
                 let image = UIImage(data: data)
                 DispatchQueue.main.async {
                     imageView.image = image
+                    
+                    //Add gradient fade effect to images
+                    let gradientLayer = CAGradientLayer()
+                    gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
+                    gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
+                    gradientLayer.colors = [UIColor.white.cgColor, UIColor.white.cgColor, UIColor.clear.cgColor]
+                    gradientLayer.locations = [0, 0.5, 1]
+                    gradientLayer.frame = imageView.bounds
+                    imageView.layer.mask = gradientLayer
                 }
             }
         }.resume()
