@@ -160,6 +160,7 @@ class FavoritesViewController: UITableViewController {
                     //Sets the title and specific game slug data for the destination view controller
                     detailVC.title = favoritesList[indexPath.row].name
                     detailVC.selectedGameSlug = favoritesList[indexPath.row].slug!
+                    detailVC.randomOn = false
                 }
             }
         }

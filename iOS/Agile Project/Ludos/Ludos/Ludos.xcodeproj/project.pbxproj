@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5215A1A26116BD400E3271A /* RandomGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5215A1926116BD400E3271A /* RandomGameViewController.swift */; };
+		A5215A24261181CF00E3271A /* randomGameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5215A23261181CF00E3271A /* randomGameData.swift */; };
 		A5512FF8261026CC00126D5B /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A5512FF7261026CC00126D5B /* OpenSans-Regular.ttf */; };
 		A556942F26029FEA00020CF2 /* FavoritesDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A556942E26029FEA00020CF2 /* FavoritesDataHandler.swift */; };
 		A55694322602E00E00020CF2 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55694312602E00E00020CF2 /* FavoritesViewController.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A5215A1926116BD400E3271A /* RandomGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomGameViewController.swift; sourceTree = "<group>"; };
+		A5215A23261181CF00E3271A /* randomGameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomGameData.swift; sourceTree = "<group>"; };
 		A5512FF7261026CC00126D5B /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		A556942E26029FEA00020CF2 /* FavoritesDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesDataHandler.swift; sourceTree = "<group>"; };
 		A55694312602E00E00020CF2 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 				C34F532D25E30A8300E9D991 /* AppDelegate.swift */,
 				C34F532F25E30A8300E9D991 /* SceneDelegate.swift */,
 				C34F533325E30A8300E9D991 /* Main.storyboard */,
+				A5215A1926116BD400E3271A /* RandomGameViewController.swift */,
+				A5215A23261181CF00E3271A /* randomGameData.swift */,
 				A5919E7F260FF1390094A7F5 /* FavoriteTableViewCellController.swift */,
 				A5919E72260D636E0094A7F5 /* FiltersViewController.swift */,
 				A55694312602E00E00020CF2 /* FavoritesViewController.swift */,
@@ -165,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5215A24261181CF00E3271A /* randomGameData.swift in Sources */,
 				A556942F26029FEA00020CF2 /* FavoritesDataHandler.swift in Sources */,
 				A55694322602E00E00020CF2 /* FavoritesViewController.swift in Sources */,
 				C34F532E25E30A8300E9D991 /* AppDelegate.swift in Sources */,
@@ -172,6 +179,7 @@
 				A5919E80260FF1390094A7F5 /* FavoriteTableViewCellController.swift in Sources */,
 				A5919E73260D636E0094A7F5 /* FiltersViewController.swift in Sources */,
 				C34F534725E35A6600E9D991 /* GameData.swift in Sources */,
+				A5215A1A26116BD400E3271A /* RandomGameViewController.swift in Sources */,
 				C34F535025E446FC00E9D991 /* GameDataHandler.swift in Sources */,
 				C34F534A25E4360C00E9D991 /* DetailViewController.swift in Sources */,
 				C34F534425E3556C00E9D991 /* MainTableViewController.swift in Sources */,

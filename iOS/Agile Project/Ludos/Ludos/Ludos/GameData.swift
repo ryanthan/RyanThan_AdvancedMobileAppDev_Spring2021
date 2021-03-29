@@ -26,7 +26,6 @@ struct Game : Decodable {
     let name : String?
     let released : String?
     let background_image : String?
-    let background_image_additional : String?
     let metacritic : Int?
     let playtime : Int?
     let description : String?
@@ -41,7 +40,6 @@ struct Game : Decodable {
         name = ""
         released = ""
         background_image = ""
-        background_image_additional = ""
         metacritic = 0
         playtime = 0
         description = ""

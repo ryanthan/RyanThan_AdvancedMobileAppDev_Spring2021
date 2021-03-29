@@ -38,6 +38,7 @@ class DetailViewController: UIViewController {
     var favoriteGameDetails = Favorite()
     var imageData = [Screenshot]()
     var images = [String]()
+    var randomOn = false
     
     //Activity Indicator
     let loadingView = UIView()
@@ -48,6 +49,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .dark
+                
         //Get the game's data from the API
         gameDataHandler.onSingleDataUpdate = {[weak self] (data:Game) in self?.viewWillAppear(true)}
         gameDataHandler.loadSingleJSON("https://rawg-video-games-database.p.rapidapi.com/games/\(selectedGameSlug)") //Load json with the specific game request
@@ -103,6 +105,13 @@ class DetailViewController: UIViewController {
     //Function that gets called when the detail view appears
     override func viewWillAppear(_ animated: Bool) {
         setLoadingScreen()
+        
+        if randomOn == true {
+            favoritesButton.isHidden = true
+        } else {
+            favoritesButton.isHidden = false
+        }
+        
         //Setup and formatting:
         selectedGameDetails = gameDataHandler.getGameDetails() //Get the game details
         

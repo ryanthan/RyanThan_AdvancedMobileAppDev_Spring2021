@@ -299,6 +299,7 @@ class MainTableViewController: UITableViewController {
                     //Sets the title and specific game slug data for the destination view controller
                     detailVC.title = games[indexPath.row].name
                     detailVC.selectedGameSlug = games[indexPath.row].slug!
+                    detailVC.randomOn = false
                 }
             }
         }
