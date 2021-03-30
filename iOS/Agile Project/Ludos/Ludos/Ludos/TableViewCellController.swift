@@ -7,7 +7,7 @@
 
 import UIKit
 
-//Class for custom table cells
+//Class for custom table cells in the main table view controller
 class TableViewCellController: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var platformLabel: UILabel!

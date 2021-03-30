@@ -6,15 +6,16 @@
 //
 
 import Foundation
+import UIKit
 
-//Function to handle all of the API data
+//Class to handle all of the API data
 class GameDataHandler {
     var game = Game()
     var gameData = GameData()
     var screenShotData = ScreenshotData()
     var errorBool = false
     
-    //Closure takes an array of Game as its parameter and Void as its return type
+    //Closures:
     var onDataUpdate: ((_ data: [Game]) -> Void)?
     var onSingleDataUpdate: ((_ data: Game) -> Void)?
     var onImageDataUpdate: ((_ data: [Screenshot]) -> Void)?
@@ -38,17 +39,20 @@ class GameDataHandler {
         request.allHTTPHeaderFields = headers
 
         let session = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
-            let httpResponse = response as! HTTPURLResponse
-            let statusCode = httpResponse.statusCode
-            print(statusCode)
-            guard statusCode == 200
-            else {
-                print("File Download Error")
-                self.errorBool = true
-                return
+            if let httpResponse = response as? HTTPURLResponse {
+                let statusCode = httpResponse.statusCode
+                print(statusCode)
+                guard statusCode == 200
+                else {
+                    print("File Download Error")
+                    self.errorBool = true
+                    return
+                }
+                print("Download Successful")
+                DispatchQueue.main.async { self.parseJSON(data!)}
+            } else {
+                print("Internet Connection Error!")
             }
-            print("Download Successful")
-            DispatchQueue.main.async { self.parseJSON(data!)}
         })
         session.resume()
     }
@@ -72,22 +76,25 @@ class GameDataHandler {
         request.allHTTPHeaderFields = headers
 
         let session = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
-            let httpResponse = response as! HTTPURLResponse
-            let statusCode = httpResponse.statusCode
-            print(statusCode)
-            guard statusCode == 200
-            else {
-                print("File Download Error")
-                self.errorBool = true
-                return
+            if let httpResponse = response as? HTTPURLResponse {
+                let statusCode = httpResponse.statusCode
+                print(statusCode)
+                guard statusCode == 200
+                else {
+                    print("File Download Error")
+                    self.errorBool = true
+                    return
+                }
+                print("Download Successful")
+                DispatchQueue.main.async { self.parseJSONSingleGame(data!)}
+            } else {
+                print("Internet Connection Error!")
             }
-            print("Download Successful")
-            DispatchQueue.main.async { self.parseJSONSingleGame(data!)}
         })
         session.resume()
     }
     
-    //Function to load a single game's images from the API
+    //Function to load a single game's screenshots from the API
     func loadImagesJSON(_ urlPath : String) {
         errorBool = false
         let headers = [
@@ -106,17 +113,20 @@ class GameDataHandler {
         request.allHTTPHeaderFields = headers
 
         let session = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
-            let httpResponse = response as! HTTPURLResponse
-            let statusCode = httpResponse.statusCode
-            print(statusCode)
-            guard statusCode == 200
-            else {
-                print("File Download Error")
-                self.errorBool = true
-                return
+            if let httpResponse = response as? HTTPURLResponse {
+                let statusCode = httpResponse.statusCode
+                print(statusCode)
+                guard statusCode == 200
+                else {
+                    print("File Download Error")
+                    self.errorBool = true
+                    return
+                }
+                print("Download Successful")
+                DispatchQueue.main.async { self.parseJSONImages(data!)}
+            } else {
+                print("Internet Connection Error!")
             }
-            print("Download Successful")
-            DispatchQueue.main.async { self.parseJSONImages(data!)}
         })
         session.resume()
     }
@@ -128,7 +138,6 @@ class GameDataHandler {
             let apiData = try JSONDecoder().decode(GameData.self, from: data)
             for game in apiData.results{
                 gameData.results.append(game)
-                //print(game) //Uncomment to see all of the game details
             }
         }
         catch let jsonError {
@@ -146,7 +155,6 @@ class GameDataHandler {
         do {
             let apiData = try JSONDecoder().decode(Game.self, from: data)
             game = apiData
-            //print(game) //Uncomment to see all of the game details
         }
         catch let jsonError {
             errorBool = true
@@ -157,7 +165,7 @@ class GameDataHandler {
         onSingleDataUpdate?(game)
     }
     
-    //Function to parse the JSON Data from the entire list of games
+    //Function to parse the screenshot JSON Data from a single game
     func parseJSONImages(_ data: Data) {
         errorBool = false
         do {

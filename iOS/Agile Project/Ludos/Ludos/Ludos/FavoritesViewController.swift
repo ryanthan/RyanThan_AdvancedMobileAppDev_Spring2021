@@ -9,32 +9,35 @@ import UIKit
 
 class FavoritesViewController: UITableViewController {
     
-    //Variables
+    //Variables:
     var favoritesData = FavoritesDataHandler()
     let dataFile = "favoritesList.plist"
     var favoritesList = [Favorite]()
+    let function = CommonFunctions()
     @IBOutlet weak var emptyLabel: UILabel!
     
     //Function that runs when the view first loads
     override func viewDidLoad() {
         super.viewDidLoad()
-        overrideUserInterfaceStyle = .dark
+        overrideUserInterfaceStyle = .dark //Set the interface style to dark mode
         
         //Set the Edit button on the left of the navigation bar
         self.navigationItem.leftBarButtonItem = self.editButtonItem
         
-        //application instance
+        //Application instance
         let app = UIApplication.shared
-        //subscribe to the UIApplicationWillResignActiveNotification notification
+        //Subscribe to the UIApplicationWillResignActiveNotification notification
         NotificationCenter.default.addObserver(self, selector: #selector(self.applicationWillResignActive(_:)), name: UIApplication.willResignActiveNotification, object: app)
     }
     
-    //Function that is called when the view will appear
+    //Function that is called every time the view is loaded
     override func viewWillAppear(_ animated: Bool) {
+        //Get favorites data
         favoritesData.loadData(fileName: dataFile)
         favoritesList = favoritesData.getItems()
         DispatchQueue.main.async { self.tableView.reloadData() }
         
+        //Check if the favorites list is empty or not
         if favoritesList.isEmpty == true {
             self.navigationItem.leftBarButtonItem?.isEnabled = false
             emptyLabel.isHidden = false
@@ -62,7 +65,7 @@ class FavoritesViewController: UITableViewController {
         let game = favoritesList[indexPath.row]
         
         //Get the game image from the URL
-        loadImage(fromURL: game.background_image ?? "https://www.thermaxglobal.com/wp-content/uploads/2020/05/image-not-found.jpg", toImageView: cell.favoriteImageView)
+        function.loadImageGradient(fromURL: game.background_image ?? "https://www.thermaxglobal.com/wp-content/uploads/2020/05/image-not-found.jpg", toImageView: cell.favoriteImageView)
         
         //Set the game name
         cell.favoriteGameTitleLabel.text = game.name
@@ -75,55 +78,12 @@ class FavoritesViewController: UITableViewController {
         return cell
     }
     
-    //Function to quickly grab images from the URL
-    func loadImage(fromURL urlString: String, toImageView imageView: UIImageView) {
-        //If the URL is null, return
-        guard let url = URL(string: urlString) else {
-            return
-        }
-
-        //Add an activity indicator to the center of each imageView
-        let activityView = UIActivityIndicatorView(style: .large)
-        imageView.addSubview(activityView)
-        activityView.frame = imageView.bounds
-        activityView.translatesAutoresizingMaskIntoConstraints = false
-        activityView.centerXAnchor.constraint(equalTo: imageView.centerXAnchor).isActive = true
-        activityView.centerYAnchor.constraint(equalTo: imageView.centerYAnchor).isActive = true
-        activityView.startAnimating()
-
-        //Get the image from the URL
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            //Stop the activity indicator and remove it
-            DispatchQueue.main.async {
-                activityView.stopAnimating()
-                activityView.removeFromSuperview()
-            }
-            
-            //Update the image view if the data was successfully downloaded
-            if let data = data {
-                let image = UIImage(data: data)
-                DispatchQueue.main.async {
-                    imageView.image = image
-                    
-                    //Add gradient fade effect to images
-                    let gradientLayer = CAGradientLayer()
-                    gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
-                    gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
-                    gradientLayer.colors = [UIColor.white.cgColor, UIColor.white.cgColor, UIColor.clear.cgColor]
-                    gradientLayer.locations = [0, 0.5, 1]
-                    gradientLayer.frame = imageView.bounds
-                    imageView.layer.mask = gradientLayer
-                }
-            }
-        }.resume()
-    }
-    
-    //Override to support conditional editing of the table view.
+    //Override to support conditional editing of the table view
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
-    //Override to support editing the table view.
+    //Editing the table view
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
@@ -131,6 +91,7 @@ class FavoritesViewController: UITableViewController {
             favoritesData.deleteItem(index: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             
+            //If the list is empty, disable editing and display label
             if favoritesList.isEmpty == true {
                 self.navigationItem.leftBarButtonItem?.isEnabled = false
                 emptyLabel.isHidden = false
@@ -139,10 +100,12 @@ class FavoritesViewController: UITableViewController {
         favoritesData.saveData(fileName: dataFile)
     }
     
+    //Override to support manual reordering of the table view
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
+    //Reordering the table view
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let itemToMove = favoritesList[sourceIndexPath.row]
         favoritesList.remove(at: sourceIndexPath.row)
@@ -152,12 +115,15 @@ class FavoritesViewController: UITableViewController {
         favoritesData.saveData(fileName: dataFile)
     }
     
+    
+    // MARK: - Segue Functions
+    
     //Prepare to send data to the detail view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
-            if let detailVC = segue.destination as? DetailViewController { //Downcast the destination property to the DetailTableViewController
+            if let detailVC = segue.destination as? DetailViewController { //Downcast the destination property to the DetailViewController
                 if let indexPath = tableView.indexPath(for: (sender as? UITableViewCell)!) {
-                    //Sets the title and specific game slug data for the destination view controller
+                    //Sets the title, game slug, and randomOn data for the destination view controller
                     detailVC.title = favoritesList[indexPath.row].name
                     detailVC.selectedGameSlug = favoritesList[indexPath.row].slug!
                     detailVC.randomOn = false

@@ -7,6 +7,7 @@
 
 import Foundation
 
+//Class to handle all of the favorites plist data
 class FavoritesDataHandler {
     var favoritesData = [Favorite]() //Initialize array of strings to store data
     
@@ -61,18 +62,22 @@ class FavoritesDataHandler {
         }
     }
     
+    //Function to get the favorites list
     func getItems() -> [Favorite] {
         return favoritesData
     }
     
+    //Function to add a game to the favorites list
     func addItem(newItem: Favorite) {
         favoritesData.append(newItem)
     }
     
+    //Function to insert a game to the favorites list (for manual reordering)
     func insertItem(newItem: Favorite, index: Int) {
         favoritesData.insert(newItem, at: index)
     }
     
+    //Function to remove a game from the favorites list
     func deleteItem(index: Int){
         favoritesData.remove(at: index)
     }

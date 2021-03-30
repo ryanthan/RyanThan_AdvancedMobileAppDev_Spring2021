@@ -9,23 +9,27 @@ import UIKit
 
 class FiltersViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    //Variables & Connections:
-    @IBOutlet weak var filterPicker: UIPickerView!
-    @IBOutlet weak var filterStatementLabel: UILabel!
+    //Variables:
     let platforms = ["None", "PC", "Xbox", "PlayStation", "Nintendo", "Mobile"]
     let genres = ["None", "Action", "Indie", "Adventure", "RPG", "Strategy", "Shooter", "Casual", "Simulation", "Puzzle", "Arcade", "Platformer", "Racing", "Sports", "Multiplayer", "Fighting", "Family", "Board Games", "Educational", "Card"]
     var platformRow : String?
     var genreRow : String?
+        
+    //Connections:
+    @IBOutlet weak var filterPicker: UIPickerView!
+    @IBOutlet weak var filterStatementLabel: UILabel!
     
-    
+    //Function that runs when the view first loads
     override func viewDidLoad() {
         super.viewDidLoad()
-        overrideUserInterfaceStyle = .dark
+        overrideUserInterfaceStyle = .dark //Set the interface style to dark mode
         
         filterStatementLabel.text = "Return to the full list." //Set the initial filter label text
     }
     
-    //Picker Methods:
+    
+    // MARK: - Picker
+    
     //Return number of picker components
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
@@ -68,10 +72,13 @@ class FiltersViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     
+    // MARK: - Segue Functions
+    
     //Prepare to send data to the main table view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "applySegue" {
-            if let mainTableVC = segue.destination as? MainTableViewController { //Downcast the destination property to the DetailTableViewController
+            if let mainTableVC = segue.destination as? MainTableViewController { //Downcast the destination property to the MainTableViewController
+                //Sets the platformFilter and genreFilter data for the destination view controller
                 mainTableVC.platformFilter = platformRow ?? "None"
                 mainTableVC.genreFilter = genreRow ?? "None"
             }

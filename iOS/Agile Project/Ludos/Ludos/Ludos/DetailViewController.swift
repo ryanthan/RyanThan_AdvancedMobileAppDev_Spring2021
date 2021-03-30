@@ -39,73 +39,32 @@ class DetailViewController: UIViewController {
     var imageData = [Screenshot]()
     var images = [String]()
     var randomOn = false
-    
-    //Activity Indicator
-    let loadingView = UIView()
-    let spinner = UIActivityIndicatorView()
-    let loadingLabel = UILabel()
+    let function = CommonFunctions()
     
     //Function that runs when the view first loads
     override func viewDidLoad() {
         super.viewDidLoad()
-        overrideUserInterfaceStyle = .dark
+        overrideUserInterfaceStyle = .dark //Set the interface style to dark mode
+        
+        //Initially make the buttons disabled while the data loads
+        favoritesButton.isEnabled = false
+        metacriticButton.isEnabled = false
+        youtubeButton.isEnabled = false
                 
         //Get the game's data from the API
         gameDataHandler.onSingleDataUpdate = {[weak self] (data:Game) in self?.viewWillAppear(true)}
-        gameDataHandler.loadSingleJSON("https://rawg-video-games-database.p.rapidapi.com/games/\(selectedGameSlug)") //Load json with the specific game request
+        gameDataHandler.loadSingleJSON("https://rawg-video-games-database.p.rapidapi.com/games/\(selectedGameSlug)")
         
-        gameDataHandler.onImageDataUpdate = {[weak self] (data:[Screenshot]) in self?.render()}
+        //Get the game's screenshot data from the API
+        gameDataHandler.onImageDataUpdate = {[weak self] (data:[Screenshot]) in self?.renderScreenshots()}
         gameDataHandler.loadImagesJSON("https://rawg.io/api/games/\(selectedGameSlug)/screenshots")
     }
     
-    func render() {
-        imageData = gameDataHandler.getScreenshots()
-        
-        for i in imageData {
-            images.append(i.image!)
-        }
-        
-        if images.isEmpty == true {
-            loadImage(fromURL: "https://www.mediafreeware.com/images/no-screenshot.png", toImageView: screenShot1)
-            loadImage(fromURL: "https://www.mediafreeware.com/images/no-screenshot.png", toImageView: screenShot2)
-            loadImage(fromURL: "https://www.mediafreeware.com/images/no-screenshot.png", toImageView: screenShot3)
-        } else if images.count == 1 {
-            loadImage(fromURL: images[0], toImageView: screenShot1)
-            loadImage(fromURL: "https://www.mediafreeware.com/images/no-screenshot.png", toImageView: screenShot2)
-            loadImage(fromURL: "https://www.mediafreeware.com/images/no-screenshot.png", toImageView: screenShot3)
-        } else if images.count == 2 {
-            loadImage(fromURL: images[0], toImageView: screenShot1)
-            loadImage(fromURL: images[1], toImageView: screenShot2)
-            loadImage(fromURL: "https://www.mediafreeware.com/images/no-screenshot.png", toImageView: screenShot3)
-        } else if images.count >= 3 {
-            loadImage(fromURL: images[0], toImageView: screenShot1)
-            loadImage(fromURL: images[1], toImageView: screenShot2)
-            loadImage(fromURL: images[2], toImageView: screenShot3)
-        }
-    }
-    
-    //Save data when the UIApplicationWillResignActiveNotification notification is posted
-    @objc func applicationWillResignActive(_ notification: Notification){
-        favoritesData.saveData(fileName: dataFile)
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        favoritesData.saveData(fileName: dataFile)
-        images.removeAll()
-    }
-    
-    @IBAction func addToFavorites(_ sender: UIButton) {
-        favoritesData.addItem(newItem: favoriteGameDetails)
-        favoritesButton.setTitle("In favorites", for: .normal)
-        favoritesButton.setTitleColor(.systemGray2, for: .normal)
-        favoritesButton.isEnabled = false
-        favoritesData.saveData(fileName: dataFile)
-    }
-    
-    //Function that gets called when the detail view appears
+    //Function that is called every time the view is loaded
     override func viewWillAppear(_ animated: Bool) {
-        setLoadingScreen()
+        function.setLoadingScreen(self) //Set loading screen
         
+        //If the user came from the random games feature, hide the add to favorites button
         if randomOn == true {
             favoritesButton.isHidden = true
         } else {
@@ -115,29 +74,32 @@ class DetailViewController: UIViewController {
         //Setup and formatting:
         selectedGameDetails = gameDataHandler.getGameDetails() //Get the game details
         
+        //Get favorites list data
         favoritesData.loadData(fileName: dataFile)
         favoritesList = favoritesData.getItems()
-        //print(favoritesList)
-        
         favoriteGameDetails.slug = selectedGameDetails.slug
         favoriteGameDetails.name = selectedGameDetails.name
         favoriteGameDetails.background_image = selectedGameDetails.background_image
         favoriteGameDetails.released = selectedGameDetails.released
         
-        //application instance
+        //Application instance
         let app = UIApplication.shared
-        //subscribe to the UIApplicationWillResignActiveNotification notification
+        //Subscribe to the UIApplicationWillResignActiveNotification notification
         NotificationCenter.default.addObserver(self, selector: #selector(self.applicationWillResignActive(_:)), name: UIApplication.willResignActiveNotification, object: app)
         
+        //Genres:
         for genre in selectedGameDetails.genres {
             genreList.append(genre.name!) //Add all of the game's genres to the list
         }
+        
+        //Platforms:
         for platform in selectedGameDetails.platforms {
             platformList.append((platform.platform?.name!)!) //Add all of the game's platforms to the list
         }
         
+        //Format the release date
         if selectedGameDetails.released != "" {
-            //Format the release date
+            
             let dateFormatterGet = DateFormatter()
             dateFormatterGet.dateFormat = "yyyy-MM-dd"
             let dateFormatterPrint = DateFormatter()
@@ -153,8 +115,9 @@ class DetailViewController: UIViewController {
         }
         
         //Get the game image from the URL
-        loadImage(fromURL: selectedGameDetails.background_image ?? "https://www.thermaxglobal.com/wp-content/uploads/2020/05/image-not-found.jpg", toImageView: backgroundImage)
+        function.loadImage(fromURL: selectedGameDetails.background_image ?? "https://www.thermaxglobal.com/wp-content/uploads/2020/05/image-not-found.jpg", toImageView: backgroundImage)
         
+        //Clean up the game's description:
         //Learned how to remove html tags from a string here: https://stackoverflow.com/questions/25983558/stripping-out-html-tags-from-a-string
         let cleanedDescription1 = selectedGameDetails.description!.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
         let cleanedDescription2 = cleanedDescription1.replacingOccurrences(of: "&#39;", with: "'", range: nil)
@@ -163,10 +126,10 @@ class DetailViewController: UIViewController {
         //Fill in the page details
         descriptionLabel?.text = cleanedDescription3 //Set the game description
         
+        //Fill in labels:
         if platformLabel.text == "" {
             platformLabel?.text = platformList.joined(separator: ", ")
         }
-        
         if genreLabel.text == "" {
             genreLabel?.text = genreList.joined(separator: ", ")
         }
@@ -175,10 +138,12 @@ class DetailViewController: UIViewController {
         playtimeLabel?.text = "Average Playtime: \(selectedGameDetails.playtime ?? 0) hours"
         esrbLabel?.text = "ESRB Rating: \(selectedGameDetails.esrb_rating?.name ?? "---")"
         
+        //Customize buttons
         favoritesButton.layer.cornerRadius = 15
         metacriticButton.layer.cornerRadius = 15
         youtubeButton.layer.cornerRadius = 15
         
+        //Change the button text if the Metacritic link is unavailable
         if selectedGameDetails.metacritic_url == "" {
             metacriticButton.isEnabled = false
             metacriticButton.setTitle("Metacritic link not available.", for: .normal)
@@ -187,14 +152,6 @@ class DetailViewController: UIViewController {
             metacriticButton.isEnabled = true
             metacriticButton.setTitle("View on Metacritic", for: .normal)
             metacriticButton.setTitleColor(.white, for: .normal)
-        }
-        
-        for game in favoritesList {
-            if favoriteGameDetails.slug == game.slug {
-                favoritesButton.setTitle("In favorites", for: .normal)
-                favoritesButton.setTitleColor(.systemGray2, for: .normal)
-                favoritesButton.isEnabled = false
-            }
         }
         
         //Add a unique title label to account for long game names
@@ -207,9 +164,73 @@ class DetailViewController: UIViewController {
         titleLabel!.text = selectedGameDetails.name
         self.navigationItem.titleView = titleLabel
         
+        //Remove the loading screen if the data is loaded
         if titleLabel!.text != "" {
-            removeLoadingScreen()
+            function.removeLoadingScreen()
+            youtubeButton.isEnabled = true //Enable button
+            favoritesButton.isEnabled = true //Enable button
+            
+            //Check if the game is already in the favorites list
+            for game in favoritesList {
+                if favoriteGameDetails.slug == game.slug {
+                    favoritesButton.setTitle("In favorites", for: .normal)
+                    favoritesButton.setTitleColor(.systemGray2, for: .normal)
+                    favoritesButton.isEnabled = false
+                }
+            }
         }
+    }
+    
+    //Save data when the view disappears
+    override func viewDidDisappear(_ animated: Bool) {
+        favoritesData.saveData(fileName: dataFile)
+        images.removeAll()
+    }
+    
+    //Function to add screenshots to the detail view
+    func renderScreenshots() {
+        imageData = gameDataHandler.getScreenshots() //Get image data
+        
+        //Append image to array
+        for i in imageData {
+            images.append(i.image!)
+        }
+        
+        //Add screenshots to detail view
+        if images.isEmpty == true {
+            function.loadImage(fromURL: "https://www.mediafreeware.com/images/no-screenshot.png", toImageView: screenShot1)
+            function.loadImage(fromURL: "https://www.mediafreeware.com/images/no-screenshot.png", toImageView: screenShot2)
+            function.loadImage(fromURL: "https://www.mediafreeware.com/images/no-screenshot.png", toImageView: screenShot3)
+        } else if images.count == 1 {
+            function.loadImage(fromURL: images[0], toImageView: screenShot1)
+            function.loadImage(fromURL: "https://www.mediafreeware.com/images/no-screenshot.png", toImageView: screenShot2)
+            function.loadImage(fromURL: "https://www.mediafreeware.com/images/no-screenshot.png", toImageView: screenShot3)
+        } else if images.count == 2 {
+            function.loadImage(fromURL: images[0], toImageView: screenShot1)
+            function.loadImage(fromURL: images[1], toImageView: screenShot2)
+            function.loadImage(fromURL: "https://www.mediafreeware.com/images/no-screenshot.png", toImageView: screenShot3)
+        } else if images.count >= 3 {
+            function.loadImage(fromURL: images[0], toImageView: screenShot1)
+            function.loadImage(fromURL: images[1], toImageView: screenShot2)
+            function.loadImage(fromURL: images[2], toImageView: screenShot3)
+        }
+    }
+    
+    //Save data when the UIApplicationWillResignActiveNotification notification is posted
+    @objc func applicationWillResignActive(_ notification: Notification){
+        favoritesData.saveData(fileName: dataFile)
+    }
+    
+    
+    // MARK: - Button Functions
+    
+    //Add the current game to the favorites list when the button is pressed
+    @IBAction func addToFavorites(_ sender: UIButton) {
+        favoritesData.addItem(newItem: favoriteGameDetails)
+        favoritesButton.setTitle("In favorites", for: .normal)
+        favoritesButton.setTitleColor(.systemGray2, for: .normal)
+        favoritesButton.isEnabled = false
+        favoritesData.saveData(fileName: dataFile)
     }
     
     //Open the Metacritic link (if available) when the button is pressed
@@ -227,83 +248,8 @@ class DetailViewController: UIViewController {
         UIApplication.shared.open(NSURL(string: "https://www.youtube.com/results?search_query=\(finalSearch)")! as URL)
     }
     
+    //Open a link to the API's website when the button is pressed
     @IBAction func openRAWGApi(_ sender: UIButton) {
         UIApplication.shared.open(NSURL(string: "https://rawg.io/apidocs")! as URL)
-    }
-    
-    //Function to quickly grab images from the URL
-    //Help from: https://stackoverflow.com/questions/44519925/swift-3-url-image-makes-uitableview-scroll-slow-issue
-    func loadImage(fromURL urlString: String, toImageView imageView: UIImageView) {
-        //If the URL is null, return
-        guard let url = URL(string: urlString) else {
-            return
-        }
-
-        //Add an activity indicator to the center of each imageView
-        let activityView = UIActivityIndicatorView(style: .large)
-        imageView.addSubview(activityView)
-        activityView.frame = imageView.bounds
-        activityView.translatesAutoresizingMaskIntoConstraints = false
-        activityView.centerXAnchor.constraint(equalTo: imageView.centerXAnchor).isActive = true
-        activityView.centerYAnchor.constraint(equalTo: imageView.centerYAnchor).isActive = true
-        activityView.startAnimating()
-
-        //Get the image from the URL
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            //Stop the activity indicator and remove it
-            DispatchQueue.main.async {
-                activityView.stopAnimating()
-                activityView.removeFromSuperview()
-            }
-            
-            //Update the image view if the data was successfully downloaded
-            if let data = data {
-                let image = UIImage(data: data)
-                DispatchQueue.main.async {
-                    imageView.image = image
-                }
-            }
-        }.resume()
-    }
-    
-    //Function to display a loading screen while the data loads
-    private func setLoadingScreen() {
-        //Set up the view that contains the loading text and activity indicator
-        let width: CGFloat = 120
-        let height: CGFloat = 30
-        let x = (view.frame.width / 2) - (width / 2)
-        let y = (view.frame.height / 2) - (height / 2)
-        loadingView.frame = CGRect(x: x, y: y, width: width, height: height)
-
-        //Configure the loading text label
-        loadingLabel.textColor = .white
-        loadingLabel.textAlignment = NSTextAlignment.right
-        loadingLabel.text = "Loading..."
-        loadingLabel.backgroundColor? = .systemGray5
-        loadingLabel.frame = CGRect(x: 0, y: 0, width: 110, height: 40)
-        loadingLabel.layer.cornerRadius = 10
-        loadingLabel.layer.masksToBounds = true
-        loadingLabel.isHidden = false
-
-        //Configure the activity indicator
-        spinner.style = .medium
-        spinner.color = .white
-        spinner.frame = CGRect(x: 2, y: 5, width: 30, height: 30)
-        spinner.startAnimating()
-
-        //Adds the text and activity indicator to the view
-        loadingView.addSubview(loadingLabel)
-        loadingView.addSubview(spinner)
-
-        //Present the view
-        view.addSubview(loadingView)
-    }
-
-    //Remove the loading screen
-    private func removeLoadingScreen() {
-        //Hides the text and stops the spinner
-        spinner.stopAnimating()
-        spinner.isHidden = true
-        loadingLabel.isHidden = true
     }
 }
