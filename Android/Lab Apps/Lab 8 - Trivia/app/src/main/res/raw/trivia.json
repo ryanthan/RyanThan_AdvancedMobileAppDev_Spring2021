@@ -1,0 +1,76 @@
+{
+	"items":[
+  		{
+    		"category":"Entertainment: Board Games",
+    		"difficulty":"Easy",
+   			"question":"How many spaces are there on a standard Monopoly board?",
+    		"correct_answer":"40"
+  		},
+  		{
+    		"category":"Science & Nature",
+    		"difficulty":"Easy",
+   			"question":"What is the 'powerhouse' of the Eukaryotic animal cell?",
+    		"correct_answer":"Mitochondria"
+  		},
+  		{
+    		"category":"Entertainment: Books",
+    		"difficulty":"Easy",
+   			"question":"George Orwell wrote this book, which is often considered a statement on government oversight.",
+    		"correct_answer":"1984"
+  		},
+  		{
+    		"category":"Entertainment: Comics",
+    		"difficulty":"Easy",
+   			"question":"The main six year old protagonist in Calvin and Hobbes is named after what theologian?",
+    		"correct_answer":"John Calvin"
+  		},
+  		{
+    		"category":"Entertainment: Music",
+    		"difficulty":"Medium",
+   			"question":"Which country is singer Kyary Pamyu Pamyu from?",
+    		"correct_answer":"Japan"
+  		},
+  		{
+    		"category":"Entertainment: Film",
+    		"difficulty":"Medium",
+   			"question":"In Finding Nemo, what was the name of Nemo's mom?",
+    		"correct_answer":"Coral"
+  		},
+  		{
+    		"category":"Science: Computers",
+    		"difficulty":"Medium",
+   			"question":"Which programming language was developed by Sun Microsystems in 1995?",
+    		"correct_answer":"Java"
+  		},
+  		{
+    		"category":"Mythology",
+    		"difficulty":"Medium",
+   			"question":"What is the name of the Greek god of blacksmiths?",
+    		"correct_answer":"Hephaestus"
+  		},
+  		{
+    		"category":"Geography",
+    		"difficulty":"Hard",
+   			"question":"What is the tallest mountain in Canada?",
+    		"correct_answer":"Mount Logan"
+  		},
+  		{
+    		"category":"Animals",
+    		"difficulty":"Hard",
+   			"question":"What is the Gray Wolf's scientific name?",
+    		"correct_answer":"Canis Lupus"
+  		},
+  		{
+    		"category":"Entertainment: Television",
+    		"difficulty":"Hard",
+   			"question":"In 'Star Trek', what is the Klingon delicacy of 'gagh' made from?",
+    		"correct_answer":"Serpent worms"
+  		},
+  		{
+    		"category":"General Knowledge",
+    		"difficulty":"Hard",
+   			"question":"Which church's interior in Vatican City was designed in 1503 by renaissance architects including Bramante, Michelangelo and Bernini?",
+    		"correct_answer":"St. Peter's Basilica"
+  		}
+	]
+}

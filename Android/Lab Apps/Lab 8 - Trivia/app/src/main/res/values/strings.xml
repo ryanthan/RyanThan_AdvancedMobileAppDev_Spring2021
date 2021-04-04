@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Lab 8 - Trivia</string>
+    <string name="app_header">Click on the row to get the answer. Can you get them all correct?</string>
+</resources>
