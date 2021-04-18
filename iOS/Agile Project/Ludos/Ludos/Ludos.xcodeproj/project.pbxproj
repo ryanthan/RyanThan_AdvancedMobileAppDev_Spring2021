@@ -14,8 +14,8 @@
 		A55694322602E00E00020CF2 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55694312602E00E00020CF2 /* FavoritesViewController.swift */; };
 		A5919E73260D636E0094A7F5 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5919E72260D636E0094A7F5 /* FiltersViewController.swift */; };
 		A5919E80260FF1390094A7F5 /* FavoriteTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5919E7F260FF1390094A7F5 /* FavoriteTableViewCellController.swift */; };
-		A5A33521261280280014E619 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A33520261280280014E619 /* Reachability.swift */; };
 		A5A33524261283A50014E619 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A33523261283A50014E619 /* CommonFunctions.swift */; };
+		A5FA47B9262BACD600527724 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FA47B8262BACD600527724 /* Reachability.swift */; };
 		C34F532E25E30A8300E9D991 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F532D25E30A8300E9D991 /* AppDelegate.swift */; };
 		C34F533025E30A8300E9D991 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F532F25E30A8300E9D991 /* SceneDelegate.swift */; };
 		C34F533525E30A8300E9D991 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34F533325E30A8300E9D991 /* Main.storyboard */; };
@@ -36,8 +36,8 @@
 		A55694312602E00E00020CF2 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		A5919E72260D636E0094A7F5 /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		A5919E7F260FF1390094A7F5 /* FavoriteTableViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCellController.swift; sourceTree = "<group>"; };
-		A5A33520261280280014E619 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = "../../../../../../../Downloads/Reachability.swift-master/Sources/Reachability.swift"; sourceTree = "<group>"; };
 		A5A33523261283A50014E619 /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
+		A5FA47B8262BACD600527724 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = ../../../../../../../.Trash/Reachability.swift; sourceTree = "<group>"; };
 		C34F532A25E30A8300E9D991 /* Ludos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ludos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34F532D25E30A8300E9D991 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C34F532F25E30A8300E9D991 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 				A556942E26029FEA00020CF2 /* FavoritesDataHandler.swift */,
 				C34F534625E35A6600E9D991 /* GameData.swift */,
 				A5215A23261181CF00E3271A /* randomGameData.swift */,
-				A5A33520261280280014E619 /* Reachability.swift */,
+				A5FA47B8262BACD600527724 /* Reachability.swift */,
 				A5A33523261283A50014E619 /* CommonFunctions.swift */,
 				C34F533625E30A8300E9D991 /* Assets.xcassets */,
 				C34F533825E30A8300E9D991 /* LaunchScreen.storyboard */,
@@ -178,7 +178,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5A33524261283A50014E619 /* CommonFunctions.swift in Sources */,
-				A5A33521261280280014E619 /* Reachability.swift in Sources */,
 				A5215A24261181CF00E3271A /* randomGameData.swift in Sources */,
 				A556942F26029FEA00020CF2 /* FavoritesDataHandler.swift in Sources */,
 				A55694322602E00E00020CF2 /* FavoritesViewController.swift in Sources */,
@@ -191,6 +190,7 @@
 				C34F535025E446FC00E9D991 /* GameDataHandler.swift in Sources */,
 				C34F534A25E4360C00E9D991 /* DetailViewController.swift in Sources */,
 				C34F534425E3556C00E9D991 /* MainTableViewController.swift in Sources */,
+				A5FA47B9262BACD600527724 /* Reachability.swift in Sources */,
 				C34F533025E30A8300E9D991 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
