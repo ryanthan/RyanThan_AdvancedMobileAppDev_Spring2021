@@ -53,11 +53,11 @@ class DetailViewController: UIViewController {
                 
         //Get the game's data from the API
         gameDataHandler.onSingleDataUpdate = {[weak self] (data:Game) in self?.viewWillAppear(true)}
-        gameDataHandler.loadSingleJSON("https://rawg-video-games-database.p.rapidapi.com/games/\(selectedGameSlug)")
+        gameDataHandler.loadSingleJSON("https://rawg-video-games-database.p.rapidapi.com/games/\(selectedGameSlug)?key=8f200db32cb54e8eaac5110ea4968c5b")
         
         //Get the game's screenshot data from the API
         gameDataHandler.onImageDataUpdate = {[weak self] (data:[Screenshot]) in self?.renderScreenshots()}
-        gameDataHandler.loadImagesJSON("https://rawg.io/api/games/\(selectedGameSlug)/screenshots")
+        gameDataHandler.loadImagesJSON("https://rawg.io/api/games/\(selectedGameSlug)/screenshots?key=8f200db32cb54e8eaac5110ea4968c5b")
     }
     
     //Function that is called every time the view is loaded

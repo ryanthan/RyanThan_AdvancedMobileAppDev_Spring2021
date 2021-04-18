@@ -41,7 +41,7 @@ class RandomGameViewController: UIViewController {
         
         //Get the random game's data from the API
         gameDataHandler.onSingleDataUpdate = {[weak self] (data:Game) in self?.viewWillAppear(true)}
-        gameDataHandler.loadSingleJSON("https://rawg-video-games-database.p.rapidapi.com/games/\(randomSlug)")
+        gameDataHandler.loadSingleJSON("https://rawg-video-games-database.p.rapidapi.com/games/\(randomSlug)?key=8f200db32cb54e8eaac5110ea4968c5b")
     }
 
     //Save data when the UIApplicationWillResignActiveNotification notification is posted
@@ -137,7 +137,7 @@ class RandomGameViewController: UIViewController {
         gameDetails = Game()
         randomSlug = randomData.slugList.randomElement()!
         gameDataHandler.onSingleDataUpdate = {[weak self] (data:Game) in self?.viewWillAppear(true)}
-        gameDataHandler.loadSingleJSON("https://rawg-video-games-database.p.rapidapi.com/games/\(randomSlug)")
+        gameDataHandler.loadSingleJSON("https://rawg-video-games-database.p.rapidapi.com/games/\(randomSlug)?key=8f200db32cb54e8eaac5110ea4968c5b")
         function.setLoadingScreen(self)
     }
     
@@ -147,7 +147,7 @@ class RandomGameViewController: UIViewController {
         gameDetails = Game()
         randomSlug = randomData.slugList.randomElement()!
         gameDataHandler.onSingleDataUpdate = {[weak self] (data:Game) in self?.viewWillAppear(true)}
-        gameDataHandler.loadSingleJSON("https://rawg-video-games-database.p.rapidapi.com/games/\(randomSlug)")
+        gameDataHandler.loadSingleJSON("https://rawg-video-games-database.p.rapidapi.com/games/\(randomSlug)?key=8f200db32cb54e8eaac5110ea4968c5b")
         function.setLoadingScreen(self)
     }
     

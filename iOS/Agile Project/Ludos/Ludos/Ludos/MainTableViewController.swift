@@ -50,7 +50,7 @@ class MainTableViewController: UITableViewController {
         
         //Get the first set of data from the API
         gameDataHandler.onDataUpdate = {[weak self] (data:[Game]) in self?.viewWillAppear(true)}
-        gameDataHandler.loadListJSON("https://rawg-video-games-database.p.rapidapi.com/games")
+        gameDataHandler.loadListJSON("https://api.rawg.io/api/games?key=8f200db32cb54e8eaac5110ea4968c5b")
     }
     
     //Function that is called every time the view is loaded
@@ -135,7 +135,7 @@ class MainTableViewController: UITableViewController {
         } else if indexPath.row == lastElement && searchActive == false && filterActive == false { //If nothing is active
             activityIndicator.isHidden = false //Show the activity indicator
             activityIndicator.startAnimating() //Start animating the activity indicator
-            gameDataHandler.loadListJSON("https://api.rawg.io/api/games?page=\(pageNumber)") //Load the next page of data
+            gameDataHandler.loadListJSON("https://api.rawg.io/api/games?key=8f200db32cb54e8eaac5110ea4968c5b&page=\(pageNumber)") //Load the next page of data
             games.append(contentsOf: gameDataHandler.getGames()) //Add the data to the list
             pageNumber += 1 //Increment the page by 1
         }
@@ -166,7 +166,7 @@ class MainTableViewController: UITableViewController {
                 self.tableView.scrollToRow(at: topIndex, at: .top, animated: true)
                 self.gameDataHandler.onDataUpdate = {[weak self] (data:[Game]) in self?.viewWillAppear(true)}
                 let newString = searchString.replacingOccurrences(of: " ", with: "%20", options: .literal, range: nil)
-                self.gameDataHandler.loadListJSON("https://rawg-video-games-database.p.rapidapi.com/games?search=\(newString)")
+                self.gameDataHandler.loadListJSON("https://api.rawg.io/api/games?key=8f200db32cb54e8eaac5110ea4968c5b&search=\(newString)")
                 self.searchActive = true
                 self.filterButton.isEnabled = false
             } else { //If the textbox is empty, return to the main list
@@ -175,7 +175,7 @@ class MainTableViewController: UITableViewController {
                 let topIndex = IndexPath(row: 0, section: 0)
                 self.tableView.scrollToRow(at: topIndex, at: .top, animated: true)
                 self.gameDataHandler.onDataUpdate = {[weak self] (data:[Game]) in self?.viewWillAppear(true)}
-                self.gameDataHandler.loadListJSON("https://rawg-video-games-database.p.rapidapi.com/games")
+                self.gameDataHandler.loadListJSON("https://api.rawg.io/api/games?key=8f200db32cb54e8eaac5110ea4968c5b")
                 self.pageNumber = 2
                 self.searchActive = false
                 self.filterButton.isEnabled = true
@@ -200,7 +200,7 @@ class MainTableViewController: UITableViewController {
             self.function.setTableLoadingScreen(self, self.tableView) //Sets a loading screen while the API data loads
             self.gameDataHandler.clearGames()
             self.gameDataHandler.onDataUpdate = {[weak self] (data:[Game]) in self?.viewWillAppear(true)}
-            self.gameDataHandler.loadListJSON("https://rawg-video-games-database.p.rapidapi.com/games")
+            self.gameDataHandler.loadListJSON("https://api.rawg.io/api/games?key=8f200db32cb54e8eaac5110ea4968c5b")
             self.pageNumber = 2
             self.searchActive = false
         })
@@ -224,7 +224,7 @@ class MainTableViewController: UITableViewController {
     @IBAction func unwindSegue (_ segue:UIStoryboardSegue) {
         //If the user clicks the Apply button
         if segue.identifier == "applySegue" {
-            filterURL = "https://api.rawg.io/api/games?"
+            filterURL = "https://api.rawg.io/api/games?key=8f200db32cb54e8eaac5110ea4968c5b&"
             
             //Modify the URL based on the chosen platform filter
             switch platformFilter {
