@@ -80,15 +80,20 @@ class RandomGameViewController: UIViewController {
         //Genres
         genreList.removeAll()
         genresLabel.text = ""
-        for genre in gameDetails.genres {
-            genreList.append(genre.name!) //Add all of the game's genres to the list
+        
+        if gameDetails.genres?.isEmpty == false {
+            for genre in gameDetails.genres! {
+                genreList.append(genre.name!) //Add all of the game's genres to the list
+            }
         }
         
         //Platforms
         platformList.removeAll()
         platformsLabel.text = ""
-        for platform in gameDetails.platforms {
-            platformList.append((platform.platform?.name!)!) //Add all of the game's platforms to the list
+        if gameDetails.platforms?.isEmpty == false {
+            for platform in gameDetails.platforms! {
+                platformList.append((platform.platform?.name!)!) //Add all of the game's platforms to the list
+            }
         }
         
         titleLabel.text = gameDetails.name //Set title label text

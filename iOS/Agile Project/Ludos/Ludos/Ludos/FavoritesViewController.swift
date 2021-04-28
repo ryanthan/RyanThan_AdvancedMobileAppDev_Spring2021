@@ -24,10 +24,8 @@ class FavoritesViewController: UITableViewController {
         //Set the Edit button on the left of the navigation bar
         self.navigationItem.leftBarButtonItem = self.editButtonItem
         
-        //Application instance
-        let app = UIApplication.shared
         //Subscribe to the UIApplicationWillResignActiveNotification notification
-        NotificationCenter.default.addObserver(self, selector: #selector(self.applicationWillResignActive(_:)), name: UIApplication.willResignActiveNotification, object: app)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.applicationWillResignActive(_:)), name: UIApplication.willResignActiveNotification, object: nil)
     }
     
     //Function that is called every time the view is loaded
@@ -90,6 +88,7 @@ class FavoritesViewController: UITableViewController {
             favoritesList.remove(at: indexPath.row)
             favoritesData.deleteItem(index: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
+            favoritesData.saveData(fileName: dataFile)
             
             //If the list is empty, disable editing and display label
             if favoritesList.isEmpty == true {
@@ -97,7 +96,6 @@ class FavoritesViewController: UITableViewController {
                 emptyLabel.isHidden = false
             }
         }
-        favoritesData.saveData(fileName: dataFile)
     }
     
     //Override to support manual reordering of the table view
@@ -110,8 +108,10 @@ class FavoritesViewController: UITableViewController {
         let itemToMove = favoritesList[sourceIndexPath.row]
         favoritesList.remove(at: sourceIndexPath.row)
         favoritesData.deleteItem(index: sourceIndexPath.row)
+        
         favoritesList.insert(itemToMove, at: destinationIndexPath.row)
         favoritesData.insertItem(newItem: itemToMove, index: destinationIndexPath.row)
+        
         favoritesData.saveData(fileName: dataFile)
     }
     

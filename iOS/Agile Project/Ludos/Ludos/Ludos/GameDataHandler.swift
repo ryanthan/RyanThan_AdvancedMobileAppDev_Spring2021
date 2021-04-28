@@ -44,7 +44,7 @@ class GameDataHandler {
                 print(statusCode)
                 guard statusCode == 200
                 else {
-                    print("File Download Error")
+                    print("File Download Error in loadListJSON")
                     self.errorBool = true
                     return
                 }
@@ -81,7 +81,7 @@ class GameDataHandler {
                 print(statusCode)
                 guard statusCode == 200
                 else {
-                    print("File Download Error")
+                    print("File Download Error in loadSingleJSON")
                     self.errorBool = true
                     return
                 }
@@ -118,7 +118,7 @@ class GameDataHandler {
                 print(statusCode)
                 guard statusCode == 200
                 else {
-                    print("File Download Error")
+                    print("File Download Error in loadImagesJSON")
                     self.errorBool = true
                     return
                 }
@@ -136,14 +136,20 @@ class GameDataHandler {
         errorBool = false
         do {
             let apiData = try JSONDecoder().decode(GameData.self, from: data)
-            for game in apiData.results{
-                gameData.results.append(game)
+            //Throw an error if the search term produces no results
+            if apiData.results.isEmpty == true {
+                errorBool = true
+                print("No results can be found with the search term.")
+            } else {
+                for game in apiData.results{
+                    gameData.results.append(game)
+                }
             }
         }
         catch let jsonError {
             errorBool = true
-            print("JSON Error")
-            print(jsonError.localizedDescription)
+            print("JSON Error in parseJSON")
+            print(jsonError)
         }
         print("parseJSON Complete")
         onDataUpdate?(gameData.results)
@@ -158,7 +164,7 @@ class GameDataHandler {
         }
         catch let jsonError {
             errorBool = true
-            print("JSON Error")
+            print("JSON Error in parseJSONSingleGame")
             print(jsonError.localizedDescription)
         }
         print("parseJSON Complete")
@@ -176,7 +182,7 @@ class GameDataHandler {
         }
         catch let jsonError {
             errorBool = true
-            print("JSON Error")
+            print("JSON Error in parseJSONImages")
             print(jsonError.localizedDescription)
         }
         print("parseJSON Complete")

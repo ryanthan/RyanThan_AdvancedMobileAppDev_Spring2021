@@ -105,8 +105,10 @@ class MainTableViewController: UITableViewController {
         }
         
         //Genres
-        for genre in game.genres {
-            genreList.append(genre.name!) //Add all of the game's genres to the list
+        if game.genres?.isEmpty == false {
+            for genre in game.genres! {
+                genreList.append(genre.name!) //Add all of the game's genres to the list
+            }
         }
         cell.genreLabel?.text = genreList.joined(separator: ", ")
         genreList.removeAll() //Remove all the current genres for the next game

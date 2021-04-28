@@ -21,7 +21,6 @@ struct GameData : Decodable {
 }
 
 struct Game : Decodable {
-    let id : Int?
     let slug : String?
     let name : String?
     let released : String?
@@ -31,11 +30,10 @@ struct Game : Decodable {
     let description : String?
     let metacritic_url : String?
     var esrb_rating : esrbRatingData?
-    var platforms : [PlatformData]
-    var genres : [GenreData]
+    var platforms : [PlatformData]?
+    var genres : [GenreData]?
     
     init() {
-        id = 0
         slug = ""
         name = ""
         released = ""
@@ -44,7 +42,7 @@ struct Game : Decodable {
         playtime = 0
         description = ""
         metacritic_url = ""
-        esrb_rating = nil
+        esrb_rating = esrbRatingData()
         platforms = [PlatformData]()
         genres = [GenreData]()
     }
@@ -62,7 +60,7 @@ struct PlatformData : Decodable {
     var platform : Platform?
     
     init() {
-        platform = nil
+        platform = Platform()
     }
 }
 

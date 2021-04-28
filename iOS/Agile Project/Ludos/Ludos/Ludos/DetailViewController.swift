@@ -88,13 +88,21 @@ class DetailViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.applicationWillResignActive(_:)), name: UIApplication.willResignActiveNotification, object: app)
         
         //Genres:
-        for genre in selectedGameDetails.genres {
-            genreList.append(genre.name!) //Add all of the game's genres to the list
+        if selectedGameDetails.genres?.isEmpty == false {
+            for genre in selectedGameDetails.genres! {
+                genreList.append(genre.name!) //Add all of the game's genres to the list
+            }
+        } else {
+            platformList.append("No Genres Available")
         }
         
         //Platforms:
-        for platform in selectedGameDetails.platforms {
-            platformList.append((platform.platform?.name!)!) //Add all of the game's platforms to the list
+        if selectedGameDetails.platforms?.isEmpty == false {
+            for platform in selectedGameDetails.platforms! {
+                platformList.append((platform.platform?.name!)!) //Add all of the game's platforms to the list
+            }
+        } else {
+            platformList.append("No Platforms Available")
         }
         
         //Format the release date
