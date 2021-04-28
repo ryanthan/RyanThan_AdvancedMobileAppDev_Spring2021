@@ -88,21 +88,13 @@ class DetailViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.applicationWillResignActive(_:)), name: UIApplication.willResignActiveNotification, object: app)
         
         //Genres:
-        if selectedGameDetails.genres?.isEmpty == false {
-            for genre in selectedGameDetails.genres! {
-                genreList.append(genre.name!) //Add all of the game's genres to the list
-            }
-        } else {
-            platformList.append("No Genres Available")
+        for genre in selectedGameDetails.genres! {
+            genreList.append(genre.name!) //Add all of the game's genres to the list
         }
         
         //Platforms:
-        if selectedGameDetails.platforms?.isEmpty == false {
-            for platform in selectedGameDetails.platforms! {
-                platformList.append((platform.platform?.name!)!) //Add all of the game's platforms to the list
-            }
-        } else {
-            platformList.append("No Platforms Available")
+        for platform in selectedGameDetails.platforms! {
+            platformList.append((platform.platform?.name!)!) //Add all of the game's platforms to the list
         }
         
         //Format the release date
@@ -119,7 +111,7 @@ class DetailViewController: UIViewController {
                print("Date string error")
             }
         } else {
-            releaseDateLabel?.text = "Release Date: ---"
+            releaseDateLabel?.text = "Release Date: -----"
         }
         
         //Get the game image from the URL
@@ -144,7 +136,7 @@ class DetailViewController: UIViewController {
         
         metacriticLabel?.text = "Metacritic Score: \(selectedGameDetails.metacritic ?? 0)"
         playtimeLabel?.text = "Average Playtime: \(selectedGameDetails.playtime ?? 0) hours"
-        esrbLabel?.text = "ESRB Rating: \(selectedGameDetails.esrb_rating?.name ?? "---")"
+        esrbLabel?.text = "ESRB Rating: \(selectedGameDetails.esrb_rating?.name ?? "-----")"
         
         //Customize buttons
         favoritesButton.layer.cornerRadius = 15
@@ -177,6 +169,22 @@ class DetailViewController: UIViewController {
             function.removeLoadingScreen()
             youtubeButton.isEnabled = true //Enable button
             favoritesButton.isEnabled = true //Enable button
+            
+            if genreLabel.text == "" {
+                genreLabel?.text = "-----"
+            }
+            
+            if platformLabel.text == "" {
+                platformLabel?.text = "-----"
+            }
+            
+            if metacriticLabel.text == "Metacritic Score: 0" {
+                metacriticLabel?.text = "Metacritic Score: -----"
+            }
+            
+            if playtimeLabel.text == "Average Playtime: 0 hours" {
+                playtimeLabel?.text = "Average Playtime: -----"
+            }
             
             //Check if the game is already in the favorites list
             for game in favoritesList {
